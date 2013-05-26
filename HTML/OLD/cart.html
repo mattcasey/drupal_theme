@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+
+<!--[if IE 7]>                  <html class="ie7 no-js" lang="en">     <![endif]-->
+<!--[if lte IE 8]>              <html class="ie8 no-js" lang="en">     <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="not-ie no-js" lang="en">  <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<title>Homepage - Sellegance</title>
+	
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<!--[if !lte IE 6]><!-->
+		
+		<link rel="stylesheet" href="css/bootstrap.min.css" media="screen" />
+		
+		<link rel="stylesheet" href="css/flexslider.css" media="screen" />
+		<link rel="stylesheet" href="css/elastislide.css" media="screen" />
+
+		<link rel="stylesheet" href="js/colorbox/colorbox.css" media="screen" />
+
+		<link rel="stylesheet" href="css/style.css" media="screen" />
+
+	<!--<![endif]-->
+
+	<!--[if lte IE 6]>
+		<link rel="stylesheet" href="//universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection">
+	<![endif]-->
+
+	<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+<header id="header" class="container">
+
+	<div class="row-fluid">
+		
+		<div class="span4 leftbox">
+
+			<div id="welcome">
+				Welcome Mr. Brian Byrd
+			</div>
+
+			<div id="links" class="hidden-phone">
+				<a href="login.html" title="My Account">Control Box</a>
+				<a href="checkout.html" title="Checkout">Checkout</a>
+				<a href="login.html" title="Wishlist">Wishlist</a>
+			</div>
+
+		</div> <!-- .leftbox -->
+
+		<div id="logo" class="span4">
+			 <a href="index.html"><img src="img/nbw/nbw_logo.png" alt="Sellegance" /></a>
+		</div>
+
+		<div class="span4 rightbox">
+			
+			<div id="minicart">
+
+				<div class="heading">
+					<h4>Shopping Cart</h4>
+					<a id="cart-total">1 item(s) - $34.00</a>
+				</div>
+
+				<div class="content">
+						
+					<table class="items">
+						<tbody>
+							<tr class="item">
+								<td class="image">
+									<a href="product.html"><img src="img/products/jeansMA4-62x62.jpg" alt="Skinny Jeans Dry " title="Skinny Jeans Dry "></a>
+								</td>
+								<td class="name">
+									<a href="product.html">Skinny Jeans Dry </a>
+								</td>
+								<td class="quantity"><span class="qty">1</span></td>
+								<td class="total">$34.00</td>
+								<td>
+									<a class="close" data-dismiss="item" href="#">&times;</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<table class="total">
+						<tbody>
+							<tr>
+								<td class="right"><b>Sub-Total:</b></td>
+								<td class="right">$34.00</td>
+							</tr>
+							<tr>
+								<td class="right"><b>Total:</b></td>
+								<td class="right">$34.00</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="checkout">
+						<a href="cart.html" class="btn btn-mini">View Cart</a> 
+						<a href="checkout.html" class="btn btn-mini btn-cart">Checkout</a>
+					</div>
+
+					<a id="closecart" class="close" data-dismiss="item" title="Close" onclick="$('#minicart').removeClass('active');">×</a>
+				
+				</div>
+
+			</div>
+
+			<div id="search">
+				<div class="searchbox input-append">
+					<input type="text" name="search-box" value="" placeholder="Search" />
+					<button class="btn button-search" type="button"><i class="icon-search"></i></button>
+				</div>
+			</div>
+
+			<div id="wrapselector">
+								
+				<div id="language_selector" class="dropd">
+									
+					<span class="selected"><img src="img/flags/gb.png" alt="English">English</span>
+				
+					<ul class="options">
+						<li><a href="#"><img src="img/flags/es.png" alt="Español">Español</a></li>
+						<li><a href="#"><img src="img/flags/bg.png" alt="Bulgarian">Bulgarian</a></li>
+						<li><a href="#"><img src="img/flags/ge.png" alt="Deustch">Deustch</a></li>
+					</ul>
+
+				</div>
+
+				<div id="currency_selector" class="dropd">
+
+					<span class="selected">US Dollar</span>
+
+					<ul class="options">
+						<li><a href="#">Euro</a></li>
+						<li><a href="#">US Dollar</a></li>
+					</ul>
+
+				</div>
+
+			</div>
+
+		</div> <!-- .rightbox -->
+
+	</div> <!-- .row -->
+	
+</header><!-- #header -->
+
+<section id="content-wrapper" class="container">
+
+	<div id="thickbar"></div>
+
+	<div class="wrapper-inner">
+		
+		<nav id="mainnav" class="navbar" role="navigation">
+			<div class="navbar-inner">
+				<div class="container">
+				
+				<a class="btn btn-navbar btn-large" data-toggle="collapse" data-target=".nav-collapse">
+					<span>Menu</span><i class="icon-navbtn"></i>
+				</a>
+
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li><a href="index.html" data-description="Home" ><i class="icon-home"></i></a></li>
+						<li class="dropdown">
+							<a href="elements.html" data-description="Layouts" >Shopping Assistant</a>
+							<ul class="dropdown-menu">
+								<li><a href="about-us.html">About Us</a></li>
+								<li class="current"><a href="elements.html">Elements</a></li>
+								<li><a href="columns.html">Columns</a></li>
+								<li><a href="#">Third Level Menu</a>
+									<ul class="dropdown-menu">
+										<li><a href="#">Item 1</a></li>
+										<li><a href="#">Item 2</a></li>
+										<li><a href="#">Item 3</a></li> 
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="category.html" data-description="products category" >BLOG</a>
+							<ul class="dropdown-menu">
+								<li><a href="category.html">Category</a></li>
+								<li><a href="product.html">Product</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="cart.html" data-description="shopping cart" >Cart</a>
+							<ul class="dropdown-menu">
+								<li><a href="cart.html">Shopping Cart</a></li>
+								<li><a href="checkout.html">Checkout</a></li>
+								<li><a href="order.html">Order</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="contact-us.html" data-description="Enquire here">Music</a>
+						</li>
+					</ul>
+				</div>
+
+				</div>
+			</div>
+		</nav><!-- end #main-nav -->
+	<ul class="breadcrumb">
+
+		<li><a href="index.html">Home</a> <span class="divider">/</span></li>
+		<li><a href="cart.html">Shopping Cart</a></li>
+
+	</ul>
+
+	<header class="page-header">
+
+		<h1 class="page-title">Shopping Cart</h1>
+		
+	</header><!-- end .page-header -->
+
+	<div id="maincontent" class="" role="main">
+
+		<div class="mainborder">
+
+			<div class="cart-inner">
+
+				<div class="row-fluid">
+
+					<section id="cart-info" class="span12">
+
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="image">Image</th>
+									<th class="name">Product Name</th>
+									<th class="model">Model</th>
+									<th class="quantity">Quantity</th>
+									<th class="price">Unit Price</th>
+									<th class="total">Total</th>
+								</tr>
+							</thead>
+		        			<tbody>
+		                    	<tr>
+		            				<td class="image">
+		            					<a href="product.html"><img src="img/nbw/pulse_vibrating_mascara_62.jpg" alt="Straight Jeans" title=""></a>
+		            				</td>
+		            				<td class="name">
+		            					<a href="product.html">Pulse Mascara</a>
+										<div><small>Value: 50% discount</small></div>
+		              				</td>
+		            				<td class="model">PM</td>
+		            				<td class="quantity">
+		            					<input type="text" name="qty1" value="1" class="input-mini">&nbsp;
+										<a href="#"><img src="img/update.png" alt="Update" title="Update"></a>
+										<a href="#"><img src="img/remove.png" alt="Remove" title="Remove"></a>
+		              				</td>
+		            				<td class="price">$10.00</td>
+		            				<td class="total">$10.00</td>
+		          				</tr>
+		          				<tr>
+		          					<td class="image">
+		          						<a href="product.html"><img src="img/nbw/Ann_Taylor_62.jpg" alt="Samsung Galaxy Tab 10.1" title="Samsung Galaxy Tab 10.1"></a>
+		          					</td>
+		          					<td class="name"><a href="product.html">Ann Tailor</a>
+		                            	<span class="stock">***</span>
+		                            	<div><small>Value: 30% discount</small></div>
+		                            </td>
+		                            <td class="model">AT</td>
+		                            <td class="quantity">
+		                            	<input type="text" name="qty2" value="1" class="input-mini">&nbsp;
+										<a href="#"><img src="img/update.png" alt="Update" title="Update"></a>
+										<a href="#"><img src="img/remove.png" alt="Remove" title="Remove"></a>
+		                            </td>
+		                            <td class="price">$500.00</td>
+		                            <td class="total">$500.00</td>
+		                        </tr>
+		                        <tr>
+		                        	<td class="image">
+		                        		<a href="product.html"><img src="img/nbw/Intenzioni_62.jpg" alt="Highest Heel Classic " title="Highest Heel Classic "></a>
+		                        	</td>
+		                        	<td class="name"><a href="product.html">Intenzioni</a>
+		                            	<div>
+		                            		<small>value: 50% discount</small>
+		                            	</div>
+		                            </td>
+		                            <td class="model">IZ</td>
+		                            <td class="quantity">
+		                            	<input type="text" name="qty3" value="1" class="input-mini">&nbsp;
+										<a href="#"><img src="img/update.png" alt="Update" title="Update"></a>
+										<a href="#"><img src="img/remove.png" alt="Remove" title="Remove"></a>
+		                            </td>
+		                            <td class="price">$100.00</td>
+		                            <td class="total">$100.00</td>
+		          				</tr>
+		          			</tbody>
+		          		</table>
+		          	</section>
+
+				</div> <!-- .row -->
+
+				<div class="row-fluid">
+
+					<section id="coupon-rewards" class="span6">
+
+						<h4 class="contentset center"><div class="inner"><span>WHAT WOULD YOU LIKE TO DO NEXT?</span></div></h4>
+
+						<p>Choose if you have a discount code or reward points you want to use or would like to estimate your delivery cost.</p>
+
+							<div class="accordion">
+
+								<div class="accordion-group">
+								
+									<div class="accordion-heading">
+										<a class="accordion-toggle" data-toggle="collapse" data-target="#coupon">Coupon Code Sent to Phone</a>
+									</div>
+								 
+									<div id="coupon" class="accordion-body collapse">
+										<div class="accordion-inner">
+											<form action="" method="post" enctype="multipart/form-data">
+												<label for="coupon">Enter your coupon here:</label>
+												<input type="text" name="coupon" value="">
+												&nbsp;
+												<input type="submit" value="Apply Coupon" class="btn btn-inverse btn-small">
+											</form>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="accordion-group">
+								
+									<div class="accordion-heading">
+										<a class="accordion-toggle" data-toggle="collapse" data-target="#voucher">Gift Voucher</a>
+									</div>
+								 
+									<div id="voucher" class="accordion-body collapse">
+										<div class="accordion-inner">
+											<form action="" method="post" enctype="multipart/form-data">
+												<label for="voucher">Enter your gift voucher code here:</label>
+												<input type="text" name="voucher" value="">
+												&nbsp;
+												<input type="submit" value="Apply Voucher" class="btn btn-inverse btn-small">
+											</form>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="accordion-group">
+								
+									<div class="accordion-heading">
+										<a class="accordion-toggle" data-toggle="collapse" data-target="#shipping">Estimate Shipping &amp; Taxes</a>
+									</div>
+								 
+									<div id="shipping" class="accordion-body collapse">
+										<div class="accordion-inner">
+											
+											<form action="" method="post" enctype="multipart/form-data">
+												<p>Enter your destination to get a shipping estimate.</p>
+
+												<div class="group-control">
+													<label for="country">Country:</label>
+													<select name="country" >
+														<option value=""> --- Please Select --- </option>
+														<option value="1">Afghanistan</option>
+														<option value="2">Albania</option>
+														<option value="10">Argentina</option>
+														<option value="11">Armenia</option>
+														<option value="13">Australia</option>
+														<option value="14">Austria</option>
+														<option value="18">Bangladesh</option>
+														<option value="26">Bolivia</option>
+														<option value="30">Brazil</option>
+														<option value="31">British Indian Ocean Territory</option>
+														<option value="36">Cambodia</option>
+														<option value="38">Canada</option>
+														<option value="43">Chile</option>
+														<option value="44">China</option>
+														<option value="47">Colombia</option>
+														<option value="51">Costa Rica</option>
+														<option value="53">Croatia</option>
+														<option value="54">Cuba</option>
+														<option value="62">Ecuador</option>
+														<option value="63">Egypt</option>
+														<option value="72">Finland</option>
+														<option value="73">France</option>
+														<option value="79">Gambia</option>
+														<option value="80">Georgia</option>
+														<option value="81">Germany</option>
+														<option value="98">Iceland</option>
+														<option value="99">India</option>
+														<option value="100">Indonesia</option>
+														<option value="101">Iran (Islamic Republic of)</option>
+														<option value="102">Iraq</option>
+														<option value="103">Ireland</option>
+														<option value="104">Israel</option>
+														<option value="105">Italy</option>
+														<option value="106">Jamaica</option>
+														<option value="107">Japan</option>
+														<option value="113">Korea, Republic of</option>
+														<option value="114">Kuwait</option>
+														<option value="122">Liechtenstein</option>
+														<option value="123">Lithuania</option>
+														<option value="124">Luxembourg</option>
+														<option value="129">Malaysia</option>
+														<option value="137">Mayotte</option>
+														<option value="138">Mexico</option>
+														<option value="142">Mongolia</option>
+														<option value="144">Morocco</option>
+														<option value="145">Mozambique</option>
+														<option value="146">Myanmar</option>
+														<option value="147">Namibia</option>
+														<option value="152">New Caledonia</option>
+														<option value="153">New Zealand</option>
+														<option value="154">Nicaragua</option>
+														<option value="156">Nigeria</option>
+														<option value="160">Norway</option>
+														<option value="162">Pakistan</option>
+														<option value="164">Panama</option>
+														<option value="166">Paraguay</option>
+														<option value="167">Peru</option>
+														<option value="170">Poland</option>
+														<option value="171">Portugal</option>
+														<option value="172">Puerto Rico</option>
+														<option value="173">Qatar</option>
+														<option value="174">Reunion</option>
+														<option value="175">Romania</option>
+														<option value="176">Russian Federation</option>
+														<option value="188">Singapore</option>
+														<option value="203">Sweden</option>
+														<option value="204">Switzerland</option>
+														<option value="205">Syrian Arab Republic</option>
+														<option value="206">Taiwan</option>
+														<option value="209">Thailand</option>
+														<option value="220">Ukraine</option>
+														<option value="221">United Arab Emirates</option>
+														<option value="222">United Kingdom</option>
+														<option value="223" selected="selected">United States</option>
+														<option value="224">United States Minor Outlying Islands</option>
+														<option value="225">Uruguay</option>
+														<option value="226">Uzbekistan</option>
+													</select>
+												</div>
+												<div class="group-control">
+													<label for="region">Region/State:</label>
+													<select name="region">
+														<option value=""> --- Please Select --- </option>
+														<option value="3613">Alabama</option>
+														<option value="3614">Alaska</option>
+														<option value="3615">American Samoa</option>
+														<option value="3616">Arizona</option>
+														<option value="3617">Arkansas</option>
+														<option value="3618">Armed Forces Africa</option>
+														<option value="3619">Armed Forces Americas</option>
+														<option value="3620">Armed Forces Canada</option>
+														<option value="3621">Armed Forces Europe</option>
+														<option value="3622">Armed Forces Middle East</option>
+														<option value="3623">Armed Forces Pacific</option>
+														<option value="3624">California</option>
+														<option value="3625">Colorado</option>
+														<option value="3626">Connecticut</option>
+														<option value="3627">Delaware</option>
+														<option value="3628">District of Columbia</option>
+														<option value="3629">Federated States Of Micronesia</option>
+														<option value="3630">Florida</option>
+														<option value="3631">Georgia</option>
+														<option value="3632">Guam</option>
+														<option value="3633">Hawaii</option>
+														<option value="3634">Idaho</option>
+														<option value="3635">Illinois</option>
+														<option value="3636">Indiana</option>
+														<option value="3637">Iowa</option>
+														<option value="3638">Kansas</option>
+														<option value="3639">Kentucky</option>
+														<option value="3640">Louisiana</option>
+														<option value="3641">Maine</option>
+														<option value="3642">Marshall Islands</option>
+														<option value="3643">Maryland</option>
+														<option value="3644">Massachusetts</option>
+														<option value="3645">Michigan</option>
+														<option value="3646">Minnesota</option>
+														<option value="3647">Mississippi</option>
+														<option value="3648">Missouri</option>
+														<option value="3649">Montana</option>
+														<option value="3650">Nebraska</option>
+														<option value="3651">Nevada</option>
+														<option value="3652">New Hampshire</option>
+														<option value="3653">New Jersey</option>
+														<option value="3654">New Mexico</option>
+														<option value="3655">New York</option>
+														<option value="3656">North Carolina</option>
+														<option value="3657">North Dakota</option>
+														<option value="3658">Northern Mariana Islands</option>
+														<option value="3659">Ohio</option>
+														<option value="3660">Oklahoma</option>
+														<option value="3661">Oregon</option>
+														<option value="3662">Palau</option>
+														<option value="3663">Pennsylvania</option>
+														<option value="3664">Puerto Rico</option>
+														<option value="3665">Rhode Island</option>
+														<option value="3666">South Carolina</option>
+														<option value="3667">South Dakota</option>
+														<option value="3668">Tennessee</option>
+														<option value="3669">Texas</option>
+														<option value="3670">Utah</option>
+														<option value="3671">Vermont</option>
+														<option value="3672">Virgin Islands</option>
+														<option value="3673">Virginia</option>
+														<option value="3674">Washington</option>
+														<option value="3675">West Virginia</option>
+														<option value="3676">Wisconsin</option>
+														<option value="3677">Wyoming</option>
+													</select>
+												</div>
+												<div class="group-control">
+													<label for="postcode">Post Code:</label>
+													<input type="text" name="postcode" value="" class="input-small">
+													<div>
+														<input type="button" value="Get Quotes" id="button-quote" class="btn btn-inverse btn-small">
+													</div>
+												</div>
+													
+											</form>
+										</div>
+									</div>
+								
+								</div>
+
+							</div>
+						
+					</section>
+
+					<section id="total-cart" class="span5 offset1">
+
+						<div class="row">
+							<table id="total">
+								<tbody>
+									<tr>
+										<td colspan="5" class="right"><b>Sub-Total:</b></td>
+										<td class="right">$610.00</td>
+									</tr>
+									<tr>
+										<td colspan="5" class="right"><b>Total:</b></td>
+										<td class="right">$610.00</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="buttons">
+							<a href="checkout.html" id="checkout" class="btn btn-cart btn-large float-right">Checkout</a>
+							<a href="category.html" id="continue-shopping" class="btn">Back to Personal Mall</a>
+						</div>
+
+					</section>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div> <!-- .span12 -->
+	
+</section> <!-- #content -->
+
+<footer id="footer" class="container">
+
+	<div class="row-fluid">
+					
+			<div class="column span2">
+				<h3 class="header">Information</h3>
+				<ul class="content">
+				  <li><a href="#">About Us</a></li>
+					<li><a href="#">Delivery Information</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">Terms &amp; Conditions</a></li>
+				</ul>
+			</div>
+
+			<div class="column span2">
+				<h3 class="header">Customer Service</h3>
+				<ul class="content">
+					<li><a href="#">Contact Us</a></li>
+					<li><a href="#">Returns</a></li>
+					<li><a href="#">Site Map</a></li>
+				</ul>
+			</div>
+
+			<div class="column span2">
+				<h3 class="header">Extras</h3>
+				<ul class="content">
+					<li><a href="#">Brands</a></li>
+					<li><a href="#">Gift Vouchers</a></li>
+					<li><a href="#">Affiliates</a></li>
+					<li><a href="#">Specials</a></li>
+				</ul>
+			</div>
+
+			<div class="column span2">
+				<h3 class="header">My Account</h3>
+				<ul class="content">
+					<li><a href="#">My Account</a></li>
+					<li><a href="#">Order History</a></li>
+					<li><a href="#">Wish List</a></li>
+					<li><a href="#">Newsletter</a></li>
+				</ul>
+			</div>
+
+		<div class="span4 contact">
+						
+			<div class="social">
+				<p>
+					<span>Follow Us:</span>
+					<a href="http://facebook.com/pages/Everthemes/184498528306229" target="_blank">
+						<img src="img/facebook.png" alt="Facebook" title="Facebook">
+					</a>
+					<a href="https://twitter.com/#!/everthemes" target="_blank">
+						<img src="img/twitter.png" alt="Twitter" title="Twitter">
+					</a>
+					<a href="https://plus.google.com/u/0/105791630767456024442" target="_blank">
+						<img src="img/gplus.png" alt="Google+" title="Google+">
+					</a>
+				</p>
+			</div>
+			
+			<div class="info">
+				<p>Sellegance is a responsive, clean, beautifully designed OpenCart theme.</p>
+			</div>
+			
+		
+		</div>
+
+	</div>
+
+</footer><!-- #footer -->
+
+<footer id="footer-end" class="container">
+
+	<div class="row">
+
+		<ul class="span12">
+			Sellegance &copy; 2012
+		</ul>
+
+	</div><!-- end .container -->
+
+</footer><!-- #footer-end -->
+
+	<!--[if !lte IE 6]><!-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<!--[if lt IE 9]> <script type="text/javascript" src="js/selectivizr.min.js"></script> <![endif]-->
+		<script type="text/javascript" src="js/respond.min.js"></script>
+		<script type="text/javascript" src="js/colorbox/jquery.colorbox-min.js"></script>
+		<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing-1.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery.flexslider.min.js"></script>
+		<script type="text/javascript" src="js/jquery.elastislide.js"></script>
+		<script type="text/javascript" src="js/jquery.ui.totop.js"></script>
+		<script type="text/JavaScript" src="js/cloud-zoom.1.0.2.min.js"></script>
+		<script type="text/javascript" src="js/custom.js"></script>
+	<!--<![endif]-->
+
+</body>
+</html>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<!--[if IE 7]>                  <html class="ie7 no-js" lang="en">     <![endif]-->
+<!--[if lte IE 8]>              <html class="ie8 no-js" lang="en">     <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="not-ie no-js" lang="en">  <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<title>Elements - Sellegance</title>
+	
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<!--[if !lte IE 6]><!-->
+		
+		<link rel="stylesheet" href="css/bootstrap.min.css" media="screen" />
+		
+		<link rel="stylesheet" href="css/flexslider.css" media="screen" />
+		<link rel="stylesheet" href="css/elastislide.css" media="screen" />
+
+		<link rel="stylesheet" href="js/colorbox/colorbox.css" media="screen" />
+
+		<link rel="stylesheet" href="css/style.css" media="screen" />
+
+	<!--<![endif]-->
+
+	<!--[if lte IE 6]>
+		<link rel="stylesheet" href="//universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection">
+	<![endif]-->
+
+	<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+<header id="header" class="container">
+
+	<div class="row-fluid">
+		
+		<div class="span4 leftbox">
+
+			<div id="welcome">
+				Welcome visitor you can <a href="login.html">login</a> or <a href="login.html">create an account</a>.
+			</div>
+
+			<div id="links" class="hidden-phone">
+				<a href="login.html" title="My Account">My Account</a>
+				<a href="checkout.html" title="Checkout">Checkout</a>
+				<a href="login.html" title="Wishlist">Wishlist</a>
+			</div>
+
+		</div> <!-- .leftbox -->
+
+		<div id="logo" class="span4">
+			 <a href="index.html"><img src="img/logo.png" alt="Sellegance" /></a>
+		</div>
+
+		<div class="span4 rightbox">
+			
+			<div id="minicart">
+
+				<div class="heading">
+					<h4>Shopping Cart</h4>
+					<a id="cart-total">1 item(s) - $34.00</a>
+				</div>
+
+				<div class="content">
+						
+					<table class="items">
+						<tbody>
+							<tr class="item">
+								<td class="image">
+									<a href="product.html"><img src="img/products/jeansMA4-62x62.jpg" alt="Skinny Jeans Dry " title="Skinny Jeans Dry "></a>
+								</td>
+								<td class="name">
+									<a href="product.html">Skinny Jeans Dry </a>
+								</td>
+								<td class="quantity"><span class="qty">1</span></td>
+								<td class="total">$34.00</td>
+								<td>
+									<a class="close" data-dismiss="item" href="#">&times;</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<table class="total">
+						<tbody>
+							<tr>
+								<td class="right"><b>Sub-Total:</b></td>
+								<td class="right">$34.00</td>
+							</tr>
+							<tr>
+								<td class="right"><b>Total:</b></td>
+								<td class="right">$34.00</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="checkout">
+						<a href="cart.html" class="btn btn-mini">View Cart</a> 
+						<a href="checkout.html" class="btn btn-mini btn-cart">Checkout</a>
+					</div>
+
+					<a id="closecart" class="close" data-dismiss="item" title="Close" onclick="$('#minicart').removeClass('active');">×</a>
+				
+				</div>
+
+			</div>
+
+			<div id="search">
+				<div class="searchbox input-append">
+					<input type="text" name="search-box" value="" placeholder="Search" />
+					<button class="btn button-search" type="button"><i class="icon-search"></i></button>
+				</div>
+			</div>
+
+			<div id="wrapselector">
+								
+				<div id="language_selector" class="dropd">
+									
+					<span class="selected"><img src="img/flags/gb.png" alt="English">English</span>
+				
+					<ul class="options">
+						<li><a href="#"><img src="img/flags/es.png" alt="Español">Español</a></li>
+						<li><a href="#"><img src="img/flags/bg.png" alt="Bulgarian">Bulgarian</a></li>
+						<li><a href="#"><img src="img/flags/ge.png" alt="Deustch">Deustch</a></li>
+					</ul>
+
+				</div>
+
+				<div id="currency_selector" class="dropd">
+
+					<span class="selected">US Dollar</span>
+
+					<ul class="options">
+						<li><a href="#">Euro</a></li>
+						<li><a href="#">US Dollar</a></li>
+					</ul>
+
+				</div>
+
+			</div>
+
+		</div> <!-- .rightbox -->
+
+	</div> <!-- .row -->
+	
+</header><!-- #header -->
+
+<section id="content-wrapper" class="container">
+
+	<div id="thickbar"></div>
+
+	<div class="wrapper-inner">
+		
+		<nav id="mainnav" class="navbar" role="navigation">
+			<div class="navbar-inner">
+				<div class="container">
+				
+				<a class="btn btn-navbar btn-large" data-toggle="collapse" data-target=".nav-collapse">
+					<span>Menu</span><i class="icon-navbtn"></i>
+				</a>
+
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li><a href="index.html" data-description="Home" ><i class="icon-home"></i></a></li>
+						<li class="dropdown">
+							<a href="elements.html" data-description="Layouts" >Layouts</a>
+							<ul class="dropdown-menu">
+								<li><a href="about-us.html">About Us</a></li>
+								<li class="current"><a href="elements.html">Elements</a></li>
+								<li><a href="columns.html">Columns</a></li>
+								<li><a href="#">Third Level Menu</a>
+									<ul class="dropdown-menu">
+										<li><a href="#">Item 1</a></li>
+										<li><a href="#">Item 2</a></li>
+										<li><a href="#">Item 3</a></li> 
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="category.html" data-description="products category" >Category</a>
+							<ul class="dropdown-menu">
+								<li><a href="category.html">Category</a></li>
+								<li><a href="product.html">Product</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="cart.html" data-description="shopping cart" >Cart</a>
+							<ul class="dropdown-menu">
+								<li><a href="cart.html">Shopping Cart</a></li>
+								<li><a href="checkout.html">Checkout</a></li>
+								<li><a href="order.html">Order</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="contact-us.html" data-description="Enquire here">Contact</a>
+						</li>
+					</ul>
+				</div>
+
+				</div>
+			</div>
+		</nav><!-- end #main-nav -->
+
+	<ul class="breadcrumb">
+
+		<li><a href="index.html">Home</a> <span class="divider">/</span></li>
+		<li><a href="elements.html">Elements</a></li>
+
+	</ul>
+
+	<header class="page-header">
+
+		<h1 class="page-title">Elements</h1>
+		
+	</header><!-- end .page-header -->
+
+	<section id="maincontent" role="main">
+
+		<div class="row-fluid">
+		
+			<div class="span4">
+
+				<h4>Accordion</h4>
+
+				<div class="accordion" id="accordion2">
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+								Item #1
+							</a>
+						</div>
+					  <div id="collapseOne" class="accordion-body collapse" style="height: 0px; ">
+						<div class="accordion-inner">
+						  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+						</div>
+					  </div>
+					</div>
+					<div class="accordion-group">
+					  <div class="accordion-heading">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+						  Item #2
+						</a>
+					  </div>
+					  <div id="collapseTwo" class="accordion-body in collapse" style="height: auto; ">
+						<div class="accordion-inner">
+						  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+						</div>
+					  </div>
+					</div>
+					<div class="accordion-group">
+					  <div class="accordion-heading">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+						  Item #3
+						</a>
+					  </div>
+					  <div id="collapseThree" class="accordion-body collapse">
+						<div class="accordion-inner">
+						  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+						</div>
+					  </div>
+					</div>
+				  </div>
+				
+			</div><!-- end .span4 -->
+			
+			<div class="span4">
+
+				<h4>Tabs</h4>
+
+				<ul id="tab" class="nav nav-tabs">
+					<li class=""><a href="#home" data-toggle="tab">Home</a></li>
+					<li class="active"><a href="#profile" data-toggle="tab">Profile</a></li>
+					<li class="dropdown">
+						<a href="#" >Dropdown</a>
+						<ul class="dropdown-menu">
+							<li><a href="#dropdown1" data-toggle="tab">@fat</a></li>
+							<li><a href="#dropdown2" data-toggle="tab">@mdo</a></li>
+						</ul>
+					</li>
+				</ul>
+
+				<div id="myTabContent" class="tab-content">
+					<div class="tab-pane fade" id="home">
+						<p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+					</div>
+					<div class="tab-pane fade active in" id="profile">
+						<p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+					</div>
+					<div class="tab-pane fade" id="dropdown1">
+						<p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+					</div>
+					<div class="tab-pane fade" id="dropdown2">
+						<p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
+					</div>
+				</div>
+				
+			</div><!-- end .span4 -->
+			
+			<div class="span4">
+
+				<h4>Alert Boxes</h4>
+
+				<div class="alert alert-error"><a class="close" data-dismiss="alert">×</a><strong>Error</strong> - Your message! </div>
+				
+				<div class="alert alert-success"><a class="close" data-dismiss="alert">×</a><strong>Success</strong> - Your message! </div>
+
+				<div class="alert alert-info"><a class="close" data-dismiss="alert">×</a><strong>Information</strong> - Your message! </div>
+
+				<div class="alert alert-information"><a class="close" data-dismiss="alert">×</a><strong>Info</strong> - Your message! </div>
+				
+			</div><!-- end .span4 -->
+
+		</div><!-- .row -->
+
+	</section>
+	
+</section><!-- end #content -->
+
+<footer id="footer" class="container">
+
+	<div class="row-fluid">
+					
+			<div class="column span2">
+				<h3 class="header">Information</h3>
+				<ul class="content">
+				  <li><a href="#">About Us</a></li>
+					<li><a href="#">Delivery Information</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">Terms &amp; Conditions</a></li>
+				</ul>
+			</div>
+
+			<div class="column span2">
+				<h3 class="header">Customer Service</h3>
+				<ul class="content">
+					<li><a href="#">Contact Us</a></li>
+					<li><a href="#">Returns</a></li>
+					<li><a href="#">Site Map</a></li>
+				</ul>
+			</div>
+
+			<div class="column span2">
+				<h3 class="header">Extras</h3>
+				<ul class="content">
+					<li><a href="#">Brands</a></li>
+					<li><a href="#">Gift Vouchers</a></li>
+					<li><a href="#">Affiliates</a></li>
+					<li><a href="#">Specials</a></li>
+				</ul>
+			</div>
+
+			<div class="column span2">
+				<h3 class="header">My Account</h3>
+				<ul class="content">
+					<li><a href="#">My Account</a></li>
+					<li><a href="#">Order History</a></li>
+					<li><a href="#">Wish List</a></li>
+					<li><a href="#">Newsletter</a></li>
+				</ul>
+			</div>
+
+		<div class="span4 contact">
+						
+			<div class="social">
+				<p>
+					<span>Follow Us:</span>
+					<a href="http://facebook.com/pages/Everthemes/184498528306229" target="_blank">
+						<img src="img/facebook.png" alt="Facebook" title="Facebook">
+					</a>
+					<a href="https://twitter.com/#!/everthemes" target="_blank">
+						<img src="img/twitter.png" alt="Twitter" title="Twitter">
+					</a>
+					<a href="https://plus.google.com/u/0/105791630767456024442" target="_blank">
+						<img src="img/gplus.png" alt="Google+" title="Google+">
+					</a>
+				</p>
+			</div>
+			
+			<div class="info">
+				<p>Sellegance is a responsive, clean, beautifully designed OpenCart theme.</p>
+			</div>
+			
+		
+		</div>
+
+	</div>
+
+</footer><!-- #footer -->
+
+<footer id="footer-end" class="container">
+
+	<div class="row-fluid">
+
+		<ul class="span12">
+			Sellegance &copy; 2012
+		</ul>
+
+	</div><!-- end .container -->
+
+</footer><!-- #footer-end -->
+
+	<!--[if !lte IE 6]><!-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<!--[if lt IE 9]> <script type="text/javascript" src="js/selectivizr.min.js"></script> <![endif]-->
+		<script type="text/javascript" src="js/respond.min.js"></script>
+		<script type="text/javascript" src="js/colorbox/jquery.colorbox-min.js"></script>
+		<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing-1.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery.flexslider.min.js"></script>
+		<script type="text/javascript" src="js/jquery.elastislide.js"></script>
+		<script type="text/javascript" src="js/jquery.ui.totop.js"></script>
+		<script type="text/JavaScript" src="js/cloud-zoom.1.0.2.min.js"></script>
+		<script type="text/javascript" src="js/custom.js"></script>
+	<!--<![endif]-->
+	
+</body>
+</html>

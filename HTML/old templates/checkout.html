@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+
+<!--[if IE 7]>                  <html class="ie7 no-js" lang="en">     <![endif]-->
+<!--[if lte IE 8]>              <html class="ie8 no-js" lang="en">     <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="not-ie no-js" lang="en">  <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<title>Checkout - Sellegance</title>
+	
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<!--[if !lte IE 6]><!-->
+		
+		<link rel="stylesheet" href="css/bootstrap.min.css" media="screen" />
+		
+		<link rel="stylesheet" href="css/flexslider.css" media="screen" />
+		<link rel="stylesheet" href="css/elastislide.css" media="screen" />
+
+		<link rel="stylesheet" href="js/colorbox/colorbox.css" media="screen" />
+
+		<link rel="stylesheet" href="css/style.css" media="screen" />
+
+	<!--<![endif]-->
+
+	<!--[if lte IE 6]>
+		<link rel="stylesheet" href="//universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection">
+	<![endif]-->
+
+	<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+<header id="header" class="container">
+
+	<div class="row-fluid">
+		
+		<div class="span4 leftbox">
+
+			<div id="welcome">
+				Welcome visitor you can <a href="login.html">login</a> or <a href="login.html">create an account</a>.
+			</div>
+
+			<div id="links" class="hidden-phone">
+				<a href="login.html" title="My Account">My Account</a>
+				<a href="checkout.html" title="Checkout">Checkout</a>
+				<a href="login.html" title="Wishlist">Wishlist</a>
+			</div>
+
+		</div> <!-- .leftbox -->
+
+		<div id="logo" class="span4">
+			 <a href="index.html"><img src="img/logo.png" alt="Sellegance" /></a>
+		</div>
+
+		<div class="span4 rightbox">
+			
+			<div id="minicart">
+
+				<div class="heading">
+					<h4>Shopping Cart</h4>
+					<a id="cart-total">1 item(s) - $34.00</a>
+				</div>
+
+				<div class="content">
+						
+					<table class="items">
+						<tbody>
+							<tr class="item">
+								<td class="image">
+									<a href="product.html"><img src="img/products/jeansMA4-62x62.jpg" alt="Skinny Jeans Dry " title="Skinny Jeans Dry "></a>
+								</td>
+								<td class="name">
+									<a href="product.html">Skinny Jeans Dry </a>
+								</td>
+								<td class="quantity"><span class="qty">1</span></td>
+								<td class="total">$34.00</td>
+								<td>
+									<a class="close" data-dismiss="item" href="#">&times;</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<table class="total">
+						<tbody>
+							<tr>
+								<td class="right"><b>Sub-Total:</b></td>
+								<td class="right">$34.00</td>
+							</tr>
+							<tr>
+								<td class="right"><b>Total:</b></td>
+								<td class="right">$34.00</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="checkout">
+						<a href="cart.html" class="btn btn-mini">View Cart</a> 
+						<a href="checkout.html" class="btn btn-mini btn-cart">Checkout</a>
+					</div>
+
+					<a id="closecart" class="close" data-dismiss="item" title="Close" onclick="$('#minicart').removeClass('active');">×</a>
+				
+				</div>
+
+			</div>
+
+			<div id="search">
+				<div class="searchbox input-append">
+					<input type="text" name="search-box" value="" placeholder="Search" />
+					<button class="btn button-search" type="button"><i class="icon-search"></i></button>
+				</div>
+			</div>
+
+			<div id="wrapselector">
+								
+				<div id="language_selector" class="dropd">
+									
+					<span class="selected"><img src="img/flags/gb.png" alt="English">English</span>
+				
+					<ul class="options">
+						<li><a href="#"><img src="img/flags/es.png" alt="Español">Español</a></li>
+						<li><a href="#"><img src="img/flags/bg.png" alt="Bulgarian">Bulgarian</a></li>
+						<li><a href="#"><img src="img/flags/ge.png" alt="Deustch">Deustch</a></li>
+					</ul>
+
+				</div>
+
+				<div id="currency_selector" class="dropd">
+
+					<span class="selected">US Dollar</span>
+
+					<ul class="options">
+						<li><a href="#">Euro</a></li>
+						<li><a href="#">US Dollar</a></li>
+					</ul>
+
+				</div>
+
+			</div>
+
+		</div> <!-- .rightbox -->
+
+	</div> <!-- .row -->
+
+	
+	
+</header><!-- #header -->
+
+<section id="content-wrapper" class="container">
+
+	<div id="thickbar"></div>
+
+	<div class="wrapper-inner">
+		
+		<nav id="mainnav" class="navbar" role="navigation">
+			<div class="navbar-inner">
+				<div class="container">
+				
+				<a class="btn btn-navbar btn-large" data-toggle="collapse" data-target=".nav-collapse">
+					<span>Menu</span><i class="icon-navbtn"></i>
+				</a>
+
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li><a href="index.html" data-description="Home" ><i class="icon-home"></i></a></li>
+						<li class="dropdown">
+							<a href="elements.html" data-description="Layouts" >Layouts</a>
+							<ul class="dropdown-menu">
+								<li><a href="about-us.html">About Us</a></li>
+								<li class="current"><a href="elements.html">Elements</a></li>
+								<li><a href="columns.html">Columns</a></li>
+								<li><a href="#">Third Level Menu</a>
+									<ul class="dropdown-menu">
+										<li><a href="#">Item 1</a></li>
+										<li><a href="#">Item 2</a></li>
+										<li><a href="#">Item 3</a></li> 
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="category.html" data-description="products category" >Category</a>
+							<ul class="dropdown-menu">
+								<li><a href="category.html">Category</a></li>
+								<li><a href="product.html">Product</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="cart.html" data-description="shopping cart" >Cart</a>
+							<ul class="dropdown-menu">
+								<li><a href="cart.html">Shopping Cart</a></li>
+								<li><a href="checkout.html">Checkout</a></li>
+								<li><a href="order.html">Order</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="contact-us.html" data-description="Enquire here">Contact</a>
+						</li>
+					</ul>
+				</div>
+
+				</div>
+			</div>
+		</nav><!-- end #main-nav -->
+
+	<ul class="breadcrumb">
+
+		<li><a href="index.html">Home</a> <span class="divider">/</span></li>
+		<li><a href="cart.html">Shopping Cart</a> <span class="divider">/</span></li>
+		<li><a href="checkout.html">Checkout</a></li>
+
+	</ul>
+
+	<header class="page-header row-fluid">
+
+		<h1 class="page-title">Checkout</h1>
+		
+	</header><!-- end .page-header -->
+
+	<div id="checkout" class="accordion">
+
+							<section id="checkout-login" class="accordion-group">
+
+								<div class="accordion-heading">
+						
+									<h3 class="checkout-heading accordion-toggle" data-toggle="collapse" data-parent="#checkout" data-target="#checkout-login-content"><span>Step 1:</span> Checkout Options</h3>
+
+								</div>
+							
+								<div id="checkout-login-content" class="accordion-body in">
+
+									<div class="accordion-inner checkout-content">
+
+										<div class="row-fluid">
+
+											<div class="span6 register">
+
+												<div class="inner">
+											
+													<div class="contentset center"><h4 class="inner"><span>New Customer</span></h4></div>
+												
+													<div class="control-group">
+												
+														<label class="control-label">Checkout Options:</label>
+												
+														<div class="controls">
+												
+															<label class="radio">
+																<input type="radio" name="account" value="register" id="register" checked="checked">
+																<b>Register Account</b>
+															</label>
+												
+															<label class="radio">
+																<input type="radio" name="account" value="guest" id="guest">
+																<b>Guest Checkout</b>
+															</label>
+														
+														</div>
+												
+													</div>
+												
+													<p>By creating an account you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.</p>
+												
+													<div class="align-center">
+														<a id="button-account" class="btn btn-inverse"><span>Continue</span></a>
+													</div>
+
+												</div>
+											
+											</div>
+											
+											<div id="login" class="span6 register" novalidate="novalidate">
+
+												<div class="inner">
+											
+													<div class="contentset center"><h4 class="inner"><span>Returning Customer</span></h4></div>
+														
+													<p>I am a returning customer</p>
+
+													<form action="" id="checkout-login-form">
+												
+														<div class="control-group">
+															<label class="control-label" for="email"><b>E-Mail:</b></label>
+															<div class="controls">
+																<input type="email" class="span11 required email" name="email" id="email" required>
+															</div>
+														</div>
+													
+														<div class="control-group">
+															<label class="control-label" for="password"><b>Password:</b></label>
+															<div class="controls">
+																<input type="password" class="span11 required" name="password" id="password" required>
+															</div>
+														</div>
+													
+														<i class="icon-exclamation-sign"></i> <a href="#">Forgotten Password</a>
+													
+														<div class="align-center">
+															<input type="submit" id="button-login" value="Login" class="btn btn-inverse">
+														</div>
+
+													</form>
+
+												</div>
+											
+											</div>
+
+										</div>
+
+									</div>
+
+								</div>
+
+							</section>
+
+							<section id="billing-details" class="accordion-group">
+
+								<div class="accordion-heading">
+						
+									<h3 class="checkout-heading accordion-toggle" data-toggle="collapse" data-parent="#checkout" data-target="#checkout-billing-details"><span>Step 2:</span> Account & Billing Details</h3>
+
+								</div>
+
+							
+								<div id="checkout-billing-details" class="accordion-body collapse">
+									
+									<div class="accordion-inner checkout-content">
+
+										<form action="" id="checkout-billing-form">
+
+											<div class="row-fluid">
+											
+												<div class="span6">
+													  
+													<fieldset class="subheading">
+														<legend>Your Personal Details</legend>
+												
+														<div class="control-group">
+															<label for="firstname" class="control-label"><span class="req_mark">*</span> First Name:</label>
+															<div class="controls"><input type="text" name="firstname" value="" class="span11 required" required></div>
+														</div>
+														<div class="control-group">
+															<label for="lastname" class="control-label"><span class="req_mark">*</span> Last Name:</label>
+															<div class="controls"><input type="text" name="lastname" value="" class="span11 required" required></div>
+														</div>
+														<div class="control-group">
+															<label for="email" class="control-label"><span class="req_mark">*</span> E-Mail:</label>
+															<div class="controls"><input type="email" name="email" value="" class="span11 required email" required></div>
+														</div>
+														<div class="control-group">
+															<label for="telephone" class="control-label"><span class="req_mark">*</span> Telephone:</label>
+															<div class="controls"><input type="text" name="telephone" value="" class="span11 required" required></div>
+														</div>
+														<div class="control-group">
+															<label for="fax" class="control-label">Fax:</label>
+															<div class="controls"><input type="text" name="fax" value="" class="span11"></div>
+														</div>
+													</fieldset>
+												
+													<fieldset class="subheading">
+														<legend>Your Password</legend>
+												
+														<div class="control-group">
+															<label for="password" class="control-label"><span class="req_mark">*</span> Password:</label>
+															<input type="password" name="password" value="" class="required span11" required>
+														</div>
+														<div class="control-group">
+															<label for="confirm" class="control-label"><span class="req_mark">*</span> Password Confirm:</label>
+															<input type="password" name="confirm" value="" class="required span11" required>
+														</div>
+													
+													</fieldset>
+												
+												</div>
+												
+												<div class="span6">
+												
+													<fieldset class="subheading">
+														<legend>Your Address</legend>
+												
+														<div class="control-group">
+															<label for="company" class="control-label">Company:</label>
+															<div class="controls"><input type="text" name="company" value="" class="span11 required" required></div>
+														</div>
+														<div class="control-group">
+															<label for="address_1" class="control-label"><span class="req_mark">*</span> Address 1:</label>
+															<div class="controls"><input type="text" name="address_1" value="" class="span11 required" required></div>
+														</div>
+														<div class="control-group">
+															<label for="address_2" class="control-label">Address 2:</label>
+															<div class="controls"><input type="text" name="address_2" value="" class="span11 required" required></div>
+														</div>
+														<div class="control-group">
+															<label for="city" class="control-label"><span class="req_mark">*</span> City:</label>
+															<div class="controls"><input type="text" name="city" value="" class="span11 required" required></div>
+														</div>
+														<div class="control-group">
+															<label for="postcode" class="control-label"><span class="req_mark">*</span> Post Code:</label>
+															<div class="controls"><input type="text" name="postcode" value="" class="span11 required" required></div>
+														</div>
+														<div class="control-group">
+															<label for="country_id" class="control-label"><span class="req_mark">*</span> Country:</label>
+															<div class="controls">
+																<select name="country" class="span11 required" required>
+																	<option value=""> --- Please Select --- </option>
+																	<option value="1">Afghanistan</option>
+																	<option value="2">Albania</option>
+																	<option value="10">Argentina</option>
+																	<option value="11">Armenia</option>
+																	<option value="13">Australia</option>
+																	<option value="14">Austria</option>
+																	<option value="18">Bangladesh</option>
+																	<option value="26">Bolivia</option>
+																	<option value="30">Brazil</option>
+																	<option value="31">British Indian Ocean Territory</option>
+																	<option value="36">Cambodia</option>
+																	<option value="38">Canada</option>
+																	<option value="43">Chile</option>
+																	<option value="44">China</option>
+																	<option value="47">Colombia</option>
+																	<option value="51">Costa Rica</option>
+																	<option value="53">Croatia</option>
+																	<option value="54">Cuba</option>
+																	<option value="62">Ecuador</option>
+																	<option value="63">Egypt</option>
+																	<option value="72">Finland</option>
+																	<option value="73">France</option>
+																	<option value="79">Gambia</option>
+																	<option value="80">Georgia</option>
+																	<option value="81">Germany</option>
+																	<option value="98">Iceland</option>
+																	<option value="99">India</option>
+																	<option value="100">Indonesia</option>
+																	<option value="101">Iran (Islamic Republic of)</option>
+																	<option value="102">Iraq</option>
+																	<option value="103">Ireland</option>
+																	<option value="104">Israel</option>
+																	<option value="105">Italy</option>
+																	<option value="106">Jamaica</option>
+																	<option value="107">Japan</option>
+																	<option value="113">Korea, Republic of</option>
+																	<option value="114">Kuwait</option>
+																	<option value="122">Liechtenstein</option>
+																	<option value="123">Lithuania</option>
+																	<option value="124">Luxembourg</option>
+																	<option value="129">Malaysia</option>
+																	<option value="137">Mayotte</option>
+																	<option value="138">Mexico</option>
+																	<option value="142">Mongolia</option>
+																	<option value="144">Morocco</option>
+																	<option value="145">Mozambique</option>
+																	<option value="146">Myanmar</option>
+																	<option value="147">Namibia</option>
+																	<option value="152">New Caledonia</option>
+																	<option value="153">New Zealand</option>
+																	<option value="154">Nicaragua</option>
+																	<option value="156">Nigeria</option>
+																	<option value="160">Norway</option>
+																	<option value="162">Pakistan</option>
+																	<option value="164">Panama</option>
+																	<option value="166">Paraguay</option>
+																	<option value="167">Peru</option>
+																	<option value="170">Poland</option>
+																	<option value="171">Portugal</option>
+																	<option value="172">Puerto Rico</option>
+																	<option value="173">Qatar</option>
+																	<option value="174">Reunion</option>
+																	<option value="175">Romania</option>
+																	<option value="176">Russian Federation</option>
+																	<option value="188">Singapore</option>
+																	<option value="203">Sweden</option>
+																	<option value="204">Switzerland</option>
+																	<option value="205">Syrian Arab Republic</option>
+																	<option value="206">Taiwan</option>
+																	<option value="209">Thailand</option>
+																	<option value="220">Ukraine</option>
+																	<option value="221">United Arab Emirates</option>
+																	<option value="222">United Kingdom</option>
+																	<option value="223" selected="selected">United States</option>
+																	<option value="224">United States Minor Outlying Islands</option>
+																	<option value="225">Uruguay</option>
+																	<option value="226">Uzbekistan</option>
+																</select>
+															</div>
+														</div>
+														<div class="control-group">
+															<label for="zone_id" class="control-label"><span class="req_mark">*</span> Region / State:</label>
+															<div class="controls">
+																<select name="region" class="span11 required" required>
+																	<option value=""> --- Please Select --- </option>
+																	<option value="3613">Alabama</option>
+																	<option value="3614">Alaska</option>
+																	<option value="3615">American Samoa</option>
+																	<option value="3616">Arizona</option>
+																	<option value="3617">Arkansas</option>
+																	<option value="3618">Armed Forces Africa</option>
+																	<option value="3619">Armed Forces Americas</option>
+																	<option value="3620">Armed Forces Canada</option>
+																	<option value="3621">Armed Forces Europe</option>
+																	<option value="3622">Armed Forces Middle East</option>
+																	<option value="3623">Armed Forces Pacific</option>
+																	<option value="3624">California</option>
+																	<option value="3625">Colorado</option>
+																	<option value="3626">Connecticut</option>
+																	<option value="3627">Delaware</option>
+																	<option value="3628">District of Columbia</option>
+																	<option value="3629">Federated States Of Micronesia</option>
+																	<option value="3630">Florida</option>
+																	<option value="3631">Georgia</option>
+																	<option value="3632">Guam</option>
+																	<option value="3633">Hawaii</option>
+																	<option value="3634">Idaho</option>
+																	<option value="3635">Illinois</option>
+																	<option value="3636">Indiana</option>
+																	<option value="3637">Iowa</option>
+																	<option value="3638">Kansas</option>
+																	<option value="3639">Kentucky</option>
+																	<option value="3640">Louisiana</option>
+																	<option value="3641">Maine</option>
+																	<option value="3642">Marshall Islands</option>
+																	<option value="3643">Maryland</option>
+																	<option value="3644">Massachusetts</option>
+																	<option value="3645">Michigan</option>
+																	<option value="3646">Minnesota</option>
+																	<option value="3647">Mississippi</option>
+																	<option value="3648">Missouri</option>
+																	<option value="3649">Montana</option>
+																	<option value="3650">Nebraska</option>
+																	<option value="3651">Nevada</option>
+																	<option value="3652">New Hampshire</option>
+																	<option value="3653">New Jersey</option>
+																	<option value="3654">New Mexico</option>
+																	<option value="3655">New York</option>
+																	<option value="3656">North Carolina</option>
+																	<option value="3657">North Dakota</option>
+																	<option value="3658">Northern Mariana Islands</option>
+																	<option value="3659">Ohio</option>
+																	<option value="3660">Oklahoma</option>
+																	<option value="3661">Oregon</option>
+																	<option value="3662">Palau</option>
+																	<option value="3663">Pennsylvania</option>
+																	<option value="3664">Puerto Rico</option>
+																	<option value="3665">Rhode Island</option>
+																	<option value="3666">South Carolina</option>
+																	<option value="3667">South Dakota</option>
+																	<option value="3668">Tennessee</option>
+																	<option value="3669">Texas</option>
+																	<option value="3670">Utah</option>
+																	<option value="3671">Vermont</option>
+																	<option value="3672">Virgin Islands</option>
+																	<option value="3673">Virginia</option>
+																	<option value="3674">Washington</option>
+																	<option value="3675">West Virginia</option>
+																	<option value="3676">Wisconsin</option>
+																	<option value="3677">Wyoming</option>
+																</select>
+															</div>
+														</div>
+													</fieldset>
+													
+												</div>
+
+											</div>
+											
+											<div class="row-fluid">
+												
+												<div class="span12">
+											
+													<div class="control-group">
+														<label for="shipping" class="label-group">
+															<input type="checkbox" name="shipping_address" value="1" id="shipping" checked="checked" class="checkbox inline">
+															My delivery and billing addresses are the same.
+														</label>
+													</div>
+											
+													<div class="align-center">
+														<p>I have read and agree to the <a class="colorbox" href="dummy.html" alt="Privacy Policy"><b>Privacy Policy</b></a> <input type="checkbox" name="agree" value="1"></p>
+														<input type="submit" value="Continue" id="button-register" class="btn btn-inverse">
+													</div>
+												</div>
+											
+											</div>
+
+										</form>
+
+									</div>
+
+								</div>
+
+							</section>
+
+							<section id="shipping-details" class="accordion-group">
+
+								<div class="accordion-heading">
+						
+									<h3 class="checkout-heading accordion-toggle" data-toggle="collapse" data-parent="#checkout" data-target="#checkout-shipping-details"><span>Step 3:</span> Shipping Details</h3>
+
+								</div>
+							
+									<div id="checkout-shipping-details" class="accordion-body collapse">
+
+										<div class="accordion-inner checkout-content">
+
+											<form action="" id="checkout-shipping-form">
+
+												<div class="row-fluid">
+
+													<div class="span6">
+									  
+														<fieldset class="subheading">
+															<legend>Your Personal Details</legend>
+
+															<div class="control-group">
+																<label for="firstname" class="control-label"><span class="req_mark">*</span> First Name:</label>
+																<div class="controls"><input type="text" name="firstname" value="" class="span11 required" required></div>
+															</div>
+															<div class="control-group">
+																<label for="lastname" class="control-label"><span class="req_mark">*</span> Last Name:</label>
+																<div class="controls"><input type="text" name="lastname" value="" class="span11 required" required></div>
+															</div>
+															<div class="control-group">
+																<label for="email" class="control-label"><span class="req_mark">*</span> E-Mail:</label>
+																<div class="controls"><input type="email" name="email" value="" class="span11 required email" required></div>
+															</div>
+															<div class="control-group">
+																<label for="telephone" class="control-label"><span class="req_mark">*</span> Telephone:</label>
+																<div class="controls"><input type="text" name="telephone" value="" class="span11 required" required></div>
+															</div>
+															<div class="control-group">
+																<label for="fax" class="control-label">Fax:</label>
+																<div class="controls"><input type="text" name="fax" value="" class="span11"></div>
+															</div>
+														</fieldset>
+
+													</div>
+
+													<div class="span6">
+
+														<fieldset class="subheading">
+															<legend>Your Address</legend>
+
+															<div class="control-group">
+																<label for="company" class="control-label">Company:</label>
+																<div class="controls"><input type="text" name="company" value="" class="span11 required" required></div>
+															</div>
+															<div class="control-group">
+																<label for="address_1" class="control-label"><span class="req_mark">*</span> Address 1:</label>
+																<div class="controls"><input type="text" name="address_1" value="" class="span11 required" required></div>
+															</div>
+															<div class="control-group">
+																<label for="address_2" class="control-label">Address 2:</label>
+																<div class="controls"><input type="text" name="address_2" value="" class="span11"></div>
+															</div>
+															<div class="control-group">
+																<label for="city" class="control-label"><span class="req_mark">*</span> City:</label>
+																<div class="controls"><input type="text" name="city" value="" class="span11 required" required></div>
+															</div>
+															<div class="control-group">
+																<label for="postcode" class="control-label"><span class="req_mark">*</span> Post Code:</label>
+																<div class="controls"><input type="text" name="postcode" value="" class="span11 required" required></div>
+															</div>
+															<div class="control-group">
+																<label for="country_id" class="control-label"><span class="req_mark">*</span> Country:</label>
+																<div class="controls">
+																	<select name="country" class="span11 required" required>
+																		<option value=""> --- Please Select --- </option>
+																		<option value="1">Afghanistan</option>
+																		<option value="2">Albania</option>
+																		<option value="10">Argentina</option>
+																		<option value="11">Armenia</option>
+																		<option value="13">Australia</option>
+																		<option value="14">Austria</option>
+																		<option value="18">Bangladesh</option>
+																		<option value="26">Bolivia</option>
+																		<option value="30">Brazil</option>
+																		<option value="31">British Indian Ocean Territory</option>
+																		<option value="36">Cambodia</option>
+																		<option value="38">Canada</option>
+																		<option value="43">Chile</option>
+																		<option value="44">China</option>
+																		<option value="47">Colombia</option>
+																		<option value="51">Costa Rica</option>
+																		<option value="53">Croatia</option>
+																		<option value="54">Cuba</option>
+																		<option value="62">Ecuador</option>
+																		<option value="63">Egypt</option>
+																		<option value="72">Finland</option>
+																		<option value="73">France</option>
+																		<option value="79">Gambia</option>
+																		<option value="80">Georgia</option>
+																		<option value="81">Germany</option>
+																		<option value="98">Iceland</option>
+																		<option value="99">India</option>
+																		<option value="100">Indonesia</option>
+																		<option value="101">Iran (Islamic Republic of)</option>
+																		<option value="102">Iraq</option>
+																		<option value="103">Ireland</option>
+																		<option value="104">Israel</option>
+																		<option value="105">Italy</option>
+																		<option value="106">Jamaica</option>
+																		<option value="107">Japan</option>
+																		<option value="113">Korea, Republic of</option>
+																		<option value="114">Kuwait</option>
+																		<option value="122">Liechtenstein</option>
+																		<option value="123">Lithuania</option>
+																		<option value="124">Luxembourg</option>
+																		<option value="129">Malaysia</option>
+																		<option value="137">Mayotte</option>
+																		<option value="138">Mexico</option>
+																		<option value="142">Mongolia</option>
+																		<option value="144">Morocco</option>
+																		<option value="145">Mozambique</option>
+																		<option value="146">Myanmar</option>
+																		<option value="147">Namibia</option>
+																		<option value="152">New Caledonia</option>
+																		<option value="153">New Zealand</option>
+																		<option value="154">Nicaragua</option>
+																		<option value="156">Nigeria</option>
+																		<option value="160">Norway</option>
+																		<option value="162">Pakistan</option>
+																		<option value="164">Panama</option>
+																		<option value="166">Paraguay</option>
+																		<option value="167">Peru</option>
+																		<option value="170">Poland</option>
+																		<option value="171">Portugal</option>
+																		<option value="172">Puerto Rico</option>
+																		<option value="173">Qatar</option>
+																		<option value="174">Reunion</option>
+																		<option value="175">Romania</option>
+																		<option value="176">Russian Federation</option>
+																		<option value="188">Singapore</option>
+																		<option value="203">Sweden</option>
+																		<option value="204">Switzerland</option>
+																		<option value="205">Syrian Arab Republic</option>
+																		<option value="206">Taiwan</option>
+																		<option value="209">Thailand</option>
+																		<option value="220">Ukraine</option>
+																		<option value="221">United Arab Emirates</option>
+																		<option value="222">United Kingdom</option>
+																		<option value="223" selected="selected">United States</option>
+																		<option value="224">United States Minor Outlying Islands</option>
+																		<option value="225">Uruguay</option>
+																		<option value="226">Uzbekistan</option>
+																	</select>
+																</div>
+															</div>
+															<div class="control-group">
+																<label for="zone_id" class="control-label"><span class="req_mark">*</span> Region / State:</label>
+																<div class="controls">
+																	<select name="region" class="span11 required" required>
+																		<option value=""> --- Please Select --- </option>
+																		<option value="3613">Alabama</option>
+																		<option value="3614">Alaska</option>
+																		<option value="3615">American Samoa</option>
+																		<option value="3616">Arizona</option>
+																		<option value="3617">Arkansas</option>
+																		<option value="3618">Armed Forces Africa</option>
+																		<option value="3619">Armed Forces Americas</option>
+																		<option value="3620">Armed Forces Canada</option>
+																		<option value="3621">Armed Forces Europe</option>
+																		<option value="3622">Armed Forces Middle East</option>
+																		<option value="3623">Armed Forces Pacific</option>
+																		<option value="3624">California</option>
+																		<option value="3625">Colorado</option>
+																		<option value="3626">Connecticut</option>
+																		<option value="3627">Delaware</option>
+																		<option value="3628">District of Columbia</option>
+																		<option value="3629">Federated States Of Micronesia</option>
+																		<option value="3630">Florida</option>
+																		<option value="3631">Georgia</option>
+																		<option value="3632">Guam</option>
+																		<option value="3633">Hawaii</option>
+																		<option value="3634">Idaho</option>
+																		<option value="3635">Illinois</option>
+																		<option value="3636">Indiana</option>
+																		<option value="3637">Iowa</option>
+																		<option value="3638">Kansas</option>
+																		<option value="3639">Kentucky</option>
+																		<option value="3640">Louisiana</option>
+																		<option value="3641">Maine</option>
+																		<option value="3642">Marshall Islands</option>
+																		<option value="3643">Maryland</option>
+																		<option value="3644">Massachusetts</option>
+																		<option value="3645">Michigan</option>
+																		<option value="3646">Minnesota</option>
+																		<option value="3647">Mississippi</option>
+																		<option value="3648">Missouri</option>
+																		<option value="3649">Montana</option>
+																		<option value="3650">Nebraska</option>
+																		<option value="3651">Nevada</option>
+																		<option value="3652">New Hampshire</option>
+																		<option value="3653">New Jersey</option>
+																		<option value="3654">New Mexico</option>
+																		<option value="3655">New York</option>
+																		<option value="3656">North Carolina</option>
+																		<option value="3657">North Dakota</option>
+																		<option value="3658">Northern Mariana Islands</option>
+																		<option value="3659">Ohio</option>
+																		<option value="3660">Oklahoma</option>
+																		<option value="3661">Oregon</option>
+																		<option value="3662">Palau</option>
+																		<option value="3663">Pennsylvania</option>
+																		<option value="3664">Puerto Rico</option>
+																		<option value="3665">Rhode Island</option>
+																		<option value="3666">South Carolina</option>
+																		<option value="3667">South Dakota</option>
+																		<option value="3668">Tennessee</option>
+																		<option value="3669">Texas</option>
+																		<option value="3670">Utah</option>
+																		<option value="3671">Vermont</option>
+																		<option value="3672">Virgin Islands</option>
+																		<option value="3673">Virginia</option>
+																		<option value="3674">Washington</option>
+																		<option value="3675">West Virginia</option>
+																		<option value="3676">Wisconsin</option>
+																		<option value="3677">Wyoming</option>
+																	</select>
+																</div>
+															</div>
+														</fieldset>
+														
+													</div>
+
+												</div>
+
+												<div class="row-fluid">
+													
+													<div class="span12">
+
+														<div class="control-group">
+															<label for="shipping" class="label-group">
+																<input type="checkbox" name="shipping_address" value="1" id="shipping" checked="checked" class="checkbox inline">
+																My delivery and billing addresses are the same.
+															</label>
+														</div>
+
+														<div class="align-center">
+															<input type="submit" value="Continue" id="button-register" class="btn btn-inverse">
+														</div>
+													</div>
+
+												</div>
+
+											</form>
+
+										</div>
+
+									</div>
+
+							</section>
+
+							<section id="shipping-method" class="accordion-group">
+
+								<div class="accordion-heading">
+						
+									<h3 class="checkout-heading accordion-toggle" data-toggle="collapse" data-parent="#checkout" data-target="#checkout-shipping-method"><span>Step 4:</span> Shipping Method</h3>
+
+								</div>
+							
+								<div id="checkout-shipping-method" class="accordion-body collapse">
+									<div class="accordion-inner checkout-content">
+
+										<div class="row-fluid">
+
+											<div class="span12">
+
+												<p>Please select the preferred shipping method to use on this order.</p>
+
+												<div class="control-group">
+				
+													<div class="method-type">
+														<p>Free Shipping</p>
+														<label class="radio">
+															<input type="radio" name="shipping_method" value="free.free" id="free.free" checked="checked" class="radio inline">Free Shipping (<b>0.00€</b>)
+														</label>
+													</div>
+
+													<div class="method-type">
+														<p>Per Item</p>
+														<label class="radio">
+															<input type="radio" name="shipping_method" value="item.item" id="item.item" class="radio inline">Per Item Shipping Rate (<b>38.77€</b>)
+														</label>
+													</div>
+
+													<div class="method-type">
+														<p>Pickup</p>
+														<label class="radio">
+															<input type="radio" name="shipping_method" value="pickup.pickup" id="pickup.pickup" class="radio inline">Pickup From Store (<b>0.00€</b>)
+														</label>
+													</div>
+
+													<div class="method-type">
+														<p>Weight Based Shipping</p>
+														<label class="radio">
+															<input type="radio" name="shipping_method" value="weight.weight_5" id="weight.weight_5" class="radio inline">
+															USzone  (Weight: 0.00kg) (<b>8.08€</b>)
+														</label>
+													</div>
+																	
+													<div class="method-type">
+														<p>Flat Rate</p>
+														<label class="radio">
+															<input type="radio" name="shipping_method" value="flat.flat" id="flat.flat" class="radio inline">Flat Shipping Rate (<b>4.04€</b>)
+														</label>
+													</div>
+																	
+												</div>
+
+												<br>
+										
+												<label for="comment" class="label-group"><b>Add Comments About Your Order</b></label>
+												<div class="controls">
+													<textarea name="comment" rows="8" class="span12"></textarea>
+												</div>
+
+												<div class="align-center">
+													<input type="button" value="Continue" id="button-shipping-method" class="btn btn-inverse">
+												</div>
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div>
+
+							</section>
+
+							<section id="payment-method" class="accordion-group">
+
+								<div class="accordion-heading">
+						
+									<h3 class="checkout-heading accordion-toggle" data-toggle="collapse" data-parent="#checkout" data-target="#checkout-payment-method"><span>Step 5:</span> Payment Method</h3>
+
+								</div>
+							
+								<div id="checkout-payment-method" class="accordion-body collapse">
+
+									<div class="accordion-inner checkout-content">
+
+										<div class="row-fluid">
+
+											<div class="span12">
+
+												<p>Please select the preferred payment method to use on this order.</p>
+
+												<div class="control-group">
+																
+													<label class="radio">
+														<input type="radio" name="shipping_method" value="free.free" id="free.free" checked="checked" class="radio inline">PayPal Pro
+													</label>
+																						
+													<label class="radio">
+														<input type="radio" name="shipping_method" value="item.item" id="item.item" class="radio inline">Cash on Delivery
+													</label>
+
+												</div>
+										
+												<label for="comment" class="label-group"><b>Add Comments About Your Order</b></label>
+												<div class="controls">
+													<textarea name="comment" rows="8" class="span12"></textarea>
+												</div>
+
+												<div class="align-center">
+													<p>I have read and agree to the <a class="colorbox" href="dummy.html" alt="Privacy Policy"><b>Terms & Conditions</b></a> <input type="checkbox" name="agree" value="1"></p>
+													<input type="button" value="Continue" id="button-register" class="btn btn-inverse">
+												</div>
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div>
+
+							</section>
+
+							<section id="confirm-order" class="accordion-group">
+
+								<div class="accordion-heading">
+						
+									<h3 class="checkout-heading accordion-toggle" data-toggle="collapse" data-parent="#checkout" data-target="#checkout-confirm-order"><span>Step 6:</span> Confirm Order</h3>
+
+								</div>
+							
+								<div id="checkout-confirm-order" class="accordion-body collapse checkout-content">
+
+									<div class="accordion-inner checkout-content">
+
+										<div class="row-fluid">
+
+											<div class="span12">
+
+												<table id="confirm-table" class="table table-bordered table-adjust">
+
+													<thead>
+														<tr>
+															<th class="name">Product Name</th>
+															<th class="model">Model</th>
+															<th class="quantity">Quantity</th>
+															<th class="price">Price</th>
+															<th class="total">Total</th>
+														</tr>
+													</thead>
+
+													<tbody>
+														<tr>
+															<td class="name"><a href="http://localhost/opencart152_1/index.php?route=product/product&amp;product_id=54">Straight Jeans</a>
+																</td>
+															<td class="model">Jeans R23</td>
+															<td class="quantity">2</td>
+															<td class="price">$56.00</td>
+															<td class="total">$112.00</td>
+														</tr>
+														<tr>
+															<td class="name"><a href="http://localhost/opencart152_1/index.php?route=product/product&amp;product_id=77">Highest Heel Classic </a>
+																</td>
+															<td class="model">Shoes W23</td>
+															<td class="quantity">2</td>
+															<td class="price">$39.00</td>
+															<td class="total">$78.00</td>
+														</tr>
+													</tbody>
+
+													<tfoot>
+														<tr>
+															<td colspan="4" class="right"><b>Sub-Total:</b></td>
+															<td class="total ">$190.00</td>
+														</tr>
+														<tr>
+															<td colspan="4" class="right"><b>Free Shipping:</b></td>
+															<td class="total ">$0.00</td>
+														</tr>
+														<tr>
+															<td colspan="4" class="right"><b>Total:</b></td>
+															<td class="total last">$190.00</td>
+														</tr>
+													</tfoot>
+
+												</table>
+
+												<div class="align-center">
+													<input type="button" value="Confirm Order" id="button-confirm" class="btn btn-cart btn-large">
+												</div>
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div>
+
+							</section>
+
+						</div> <!-- #checkout -->
+
+</div>
+
+</section>
+
+<footer id="footer" class="container">
+
+	<div class="row-fluid">
+					
+			<div class="column span2">
+				<h3 class="header">Information</h3>
+				<ul class="content">
+				  <li><a href="#">About Us</a></li>
+					<li><a href="#">Delivery Information</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">Terms &amp; Conditions</a></li>
+				</ul>
+			</div>
+
+			<div class="column span2">
+				<h3 class="header">Customer Service</h3>
+				<ul class="content">
+					<li><a href="#">Contact Us</a></li>
+					<li><a href="#">Returns</a></li>
+					<li><a href="#">Site Map</a></li>
+				</ul>
+			</div>
+
+			<div class="column span2">
+				<h3 class="header">Extras</h3>
+				<ul class="content">
+					<li><a href="#">Brands</a></li>
+					<li><a href="#">Gift Vouchers</a></li>
+					<li><a href="#">Affiliates</a></li>
+					<li><a href="#">Specials</a></li>
+				</ul>
+			</div>
+
+			<div class="column span2">
+				<h3 class="header">My Account</h3>
+				<ul class="content">
+					<li><a href="#">My Account</a></li>
+					<li><a href="#">Order History</a></li>
+					<li><a href="#">Wish List</a></li>
+					<li><a href="#">Newsletter</a></li>
+				</ul>
+			</div>
+
+		<div class="span4 contact">
+						
+			<div class="social">
+				<p>
+					<span>Follow Us:</span>
+					<a href="http://facebook.com/pages/Everthemes/184498528306229" target="_blank">
+						<img src="img/facebook.png" alt="Facebook" title="Facebook">
+					</a>
+					<a href="https://twitter.com/#!/everthemes" target="_blank">
+						<img src="img/twitter.png" alt="Twitter" title="Twitter">
+					</a>
+					<a href="https://plus.google.com/u/0/105791630767456024442" target="_blank">
+						<img src="img/gplus.png" alt="Google+" title="Google+">
+					</a>
+				</p>
+			</div>
+			
+			<div class="info">
+				<p>Sellegance is a responsive, clean, beautifully designed OpenCart theme.</p>
+			</div>
+			
+		
+		</div>
+
+	</div>
+
+</footer><!-- #footer -->
+
+<footer id="footer-end" class="container">
+
+	<div class="row-fluid">
+
+		<ul class="span12">
+			Sellegance &copy; 2012
+		</ul>
+
+	</div><!-- end .container -->
+
+</footer><!-- #footer-end -->
+
+	<!--[if !lte IE 6]><!-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<!--[if lt IE 9]> <script type="text/javascript" src="js/selectivizr.min.js"></script> <![endif]-->
+		<script type="text/javascript" src="js/respond.min.js"></script>
+		<script type="text/javascript" src="js/colorbox/jquery.colorbox-min.js"></script>
+		<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing-1.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery.flexslider.min.js"></script>
+		<script type="text/javascript" src="js/jquery.elastislide.js"></script>
+		<script type="text/javascript" src="js/jquery.ui.totop.js"></script>
+		<script type="text/JavaScript" src="js/cloud-zoom.1.0.2.min.js"></script>
+		<script type="text/javascript" src="js/custom.js"></script>
+	<!--<![endif]-->
+
+</body>
+</html>

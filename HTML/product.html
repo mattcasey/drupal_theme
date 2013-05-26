@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+
+<!--[if IE 7]>                  <html class="ie7 no-js" lang="en">     <![endif]-->
+<!--[if lte IE 8]>              <html class="ie8 no-js" lang="en">     <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="not-ie no-js" lang="en">  <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<title>Product - New Breed w</title>
+	
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<!--[if !lte IE 6]><!-->
+		
+		<link rel="stylesheet" href="css/bootstrap.min.css" media="screen" />
+		
+		<link rel="stylesheet" href="css/flexslider.css" media="screen" />
+		<link rel="stylesheet" href="css/elastislide.css" media="screen" />
+
+		<link rel="stylesheet" href="js/colorbox/colorbox.css" media="screen" />
+
+		<link rel="stylesheet" href="css/style.css" media="screen" />
+
+	<!--<![endif]-->
+
+	<!--[if lte IE 6]>
+		<link rel="stylesheet" href="//universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection">
+	<![endif]-->
+
+	<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+<header id="header" class="container">
+
+	<div class="row-fluid">
+		
+		<div class="span4 leftbox">
+
+			<div id="welcome">
+				Welcome Brian Byrd
+			</div>
+
+			<div id="links" class="hidden-phone">
+				<a href="login.html" title="My Account">Control Box</a>
+				<a href="checkout.html" title="Checkout">Checkout</a>
+				<a href="login.html" title="Wishlist">Wishlist</a>
+			</div>
+
+		</div> <!-- .leftbox -->
+
+		<div id="logo" class="span4">
+			 <a href="index.html"><img src="img/nbw/nbw_logo.png" alt="Sellegance" /></a>
+		</div>
+
+		<div class="span4 rightbox">
+			
+			<div id="minicart">
+
+				<div class="heading">
+					<h4>Shopping Cart</h4>
+					<a id="cart-total">1 item(s) - $34.00</a>
+				</div>
+
+				<div class="content">
+						
+					<table class="items">
+						<tbody>
+							<tr class="item">
+								<td class="image">
+									<a href="product.html"><img src="img/products/jeansMA4-62x62.jpg" alt="Skinny Jeans Dry " title="Skinny Jeans Dry "></a>
+								</td>
+								<td class="name">
+									<a href="product.html">Skinny Jeans Dry </a>
+								</td>
+								<td class="quantity"><span class="qty">1</span></td>
+								<td class="total">$34.00</td>
+								<td>
+									<a class="close" data-dismiss="item" href="#">&times;</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<table class="total">
+						<tbody>
+							<tr>
+								<td class="right"><b>Sub-Total:</b></td>
+								<td class="right">$34.00</td>
+							</tr>
+							<tr>
+								<td class="right"><b>Total:</b></td>
+								<td class="right">$34.00</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="checkout">
+						<a href="cart.html" class="btn btn-mini">View Cart</a> 
+						<a href="checkout.html" class="btn btn-mini btn-cart">Checkout</a>
+					</div>
+
+					<a id="closecart" class="close" data-dismiss="item" title="Close" onclick="$('#minicart').removeClass('active');">×</a>
+				
+				</div>
+
+			</div>
+
+			<div id="search">
+				<div class="searchbox input-append">
+					<input type="text" name="search-box" value="" placeholder="Search" />
+					<button class="btn button-search" type="button"><i class="icon-search"></i></button>
+				</div>
+			</div>
+
+			<div id="wrapselector">
+								
+				<div id="language_selector" class="dropd">
+									
+					<span class="selected"><img src="img/flags/gb.png" alt="English">English</span>
+				
+					<ul class="options">
+						<li><a href="#"><img src="img/flags/es.png" alt="Español">Español</a></li>
+						<li><a href="#"><img src="img/flags/bg.png" alt="Bulgarian">Bulgarian</a></li>
+						<li><a href="#"><img src="img/flags/ge.png" alt="Deustch">Deustch</a></li>
+					</ul>
+
+				</div>
+
+				<div id="currency_selector" class="dropd">
+
+					<span class="selected">US Dollar</span>
+
+					<ul class="options">
+						<li><a href="#">Euro</a></li>
+						<li><a href="#">US Dollar</a></li>
+					</ul>
+
+				</div>
+
+			</div>
+
+		</div> <!-- .rightbox -->
+
+	</div> <!-- .row -->
+	
+</header><!-- #header -->
+
+<section id="content-wrapper" class="container">
+
+	<div id="thickbar"></div>
+
+	<div class="wrapper-inner">
+		
+		<nav id="mainnav" class="navbar" role="navigation">
+			<div class="navbar-inner">
+				<div class="container">
+				
+				<a class="btn btn-navbar btn-large" data-toggle="collapse" data-target=".nav-collapse">
+					<span>Menu</span><i class="icon-navbtn"></i>
+				</a>
+
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li><a href="index.html" data-description="Home" ><i class="icon-home"></i></a></li>
+						<li class="dropdown">
+							<a href="elements.html" data-description="Layouts" >Shopping Assistant</a>
+							<ul class="dropdown-menu">
+								<li><a href="about-us.html">About Us</a></li>
+								<li class="current"><a href="elements.html">Elements</a></li>
+								<li><a href="columns.html">Columns</a></li>
+								<li><a href="#">Third Level Menu</a>
+									<ul class="dropdown-menu">
+										<li><a href="#">Item 1</a></li>
+										<li><a href="#">Item 2</a></li>
+										<li><a href="#">Item 3</a></li> 
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="category.html" data-description="products category" >Blog</a>
+							<ul class="dropdown-menu">
+								<li><a href="category.html">Category</a></li>
+								<li><a href="product.html">Product</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="cart.html" data-description="shopping cart" >Cart</a>
+							<ul class="dropdown-menu">
+								<li><a href="cart.html">Shopping Cart</a></li>
+								<li><a href="checkout.html">Checkout</a></li>
+								<li><a href="order.html">Order</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="contact-us.html" data-description="Enquire here">Music</a>
+						</li>
+					</ul>
+				</div>
+
+				</div>
+			</div>
+		</nav><!-- end #main-nav -->
+
+	<ul class="breadcrumb">
+	  <li><a href="index.html">Home</a><span class="divider">/</span></li>
+	  <li><a href="category.html">Category</a><span class="divider">/</span></li>
+	  <li><a href="product.html">Samsung Galaxy Tab</a></li>
+	</ul>
+
+	<header class="page-header">
+
+		<h1 class="page-title">Product Details Page</h1>
+		<div id="notification"></div>
+		
+	</header><!-- end .page-header -->
+
+	<div class="row-fluid">
+	
+		<aside id="column-left" class="span3 hidden-phone sidebar" role="complementary">
+
+			<div class="inner-side">
+
+				<div class="contentset center"><h4 class="inner"><span>Categories</span></h4></div>
+
+				<div class="box-content box-category">
+
+					<ul>
+						<li>
+							<a href="#">Women</a>
+							<ul>
+								<li><a href="#"> - Jackets</a></li>
+								<li><a href="#"> - Jeans</a></li>
+								<li><a href="#"> - Shoes</a></li>
+								<li><a href="#"> - Skirts</a></li>
+								<li><a href="#"> - Sweats</a></li>
+								<li><a href="#"> - T-Shirts</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Men</a>
+							<ul>
+								<li><a href="#"> - Jackets</a></li>
+								<li><a href="#"> - Jeans</a></li>
+								<li><a href="#"> - Shoes</a></li>
+								<li><a href="#"> - Suits</a></li>
+								<li><a href="#"> - T-Shirts</a></li>
+								<li><a href="#"> - Watches</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="active">Shoes</a>
+							<ul>
+								<li><a href="#"> - Boots</a></li>
+								<li><a href="#"> - Heels</a></li>
+								<li><a href="#"> - Sandals</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Books</a>
+							<ul>
+								<li><a href="#"> - Biography</a></li>
+								<li><a href="#"> - Business</a></li>
+								<li><a href="#"> - Computer</a></li>
+								<li><a href="#"> - Dieth &amp; Health</a></li>
+								<li><a href="#"> - Fiction</a></li>
+								<li><a href="#"> - Mistery</a></li>
+								<li><a href="#"> - Politics</a></li>
+								<li><a href="#"> - Religion</a></li>
+								<li><a href="#"> - Romance</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Furniture</a>
+							<ul>
+								<li><a href="#"> - Bedroom</a></li>
+								<li><a href="#"> - Kitchen</a></li>
+								<li><a href="#"> - Living Room</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Electronics</a>
+							<ul>
+								<li><a href="#"> - Desktops</a></li>
+								<li><a href="#"> - Laptops</a></li>
+								<li><a href="#"> - Tablets</a></li>
+								<li><a href="#"> - Phones</a></li>
+								<li><a href="#"> - Cameras</a></li>
+								<li><a href="#"> - MP3 Players</a></li>
+							</ul>
+						</li>
+					</ul>
+
+				</div>
+
+			</div>
+			
+		</aside><!-- end .span3 -->
+		
+		<section id="maincontent" class="product-info span9" role="main">
+
+			<div class="mainborder">
+
+				<div id="toggle_sidebar"></div>
+
+				<div class="row-fluid">
+
+					<div class="span6">
+
+						<div class="image">
+							<div class="onsale">SALE</div>
+							<a href="img/products/galaxytab2-500x500.jpg" title="Samsung Galaxy Tab 10.1"  class="cloud-zoom colorbox" id='zoom1' rel="adjustX: 10, adjustY:-4, tint:'#000000',tintOpacity:0.2, zoomWidth:360, position:'inside', showTitle:false" ><img src="img/products/galaxytab2-455x475.jpg" title="Samsung Galaxy Tab 10.1" alt="Samsung Galaxy Tab 10.1" id="image"><i class="icon-zoomin"></i> Zoom</span></a>
+						</div>
+						<div class="image-additional">
+							<a href="img/products/galaxytab3-500x500.jpg" title="Samsung Galaxy Tab 10.1" class="cloud-zoom-gallery" rel="useZoom: 'zoom1', smallImage:'img/products/galaxytab3-500x500.jpg'" ><img src="img/products/galaxytab3-62x62.jpg" title="Samsung Galaxy Tab 10.1" alt="Samsung Galaxy Tab 10.1"></a>
+							<a href="img/products/galaxytab4-500x500.jpg" title="Samsung Galaxy Tab 10.1" class="cloud-zoom-gallery" rel="useZoom: 'zoom1', smallImage:'img/products/galaxytab4-500x500.jpg'" ><img src="img/products/galaxytab4-62x62.jpg" title="Samsung Galaxy Tab 10.1" alt="Samsung Galaxy Tab 10.1"></a>
+							<a href="img/products/galaxytab1-500x500.jpg" title="Samsung Galaxy Tab 10.1" class="cloud-zoom-gallery" rel="useZoom: 'zoom1', smallImage:'img/products/galaxytab1-500x500.jpg'" ><img src="img/products/galaxytab1-62x62.jpg" title="Samsung Galaxy Tab 10.1" alt="Samsung Galaxy Tab 10.1"></a>
+						</div>
+
+					</div>
+					
+					<div class="span6 rightcol">
+						
+						<div class="price">Price:<span class="price-normal">$199.99</span>
+							<div class="price-tax">Ex Tax: $199.99</div>
+						</div>
+						
+						<div class="description">
+							<span>Product Code:</span> SAM1<br>
+							<span>Reward Points:</span> 1000<br>
+							<span>Availability:</span> Pre-Order
+						</div>
+
+						<div class="cart">
+
+							<div class="add_cart">
+								<span class="quantity">
+									Qty: <input type="text" name="quantity" value="3" class="input-mini">
+									<input type="hidden" name="product_id" value="49">
+								</span>
+								<a class="btn btn-large btn-cart" id="button-cart">Add to Cart</a>
+								<div class="minimum"><span class="req_mark">*</span> This product has a minimum quantity of 3</div>
+							</div>
+
+							<div class="plus_actions">
+								<div class="wishlist"><a onclick="addToWishList('49');">Add to Wish List</a></div>
+								<div class="compare"><a onclick="addToCompare('49');">Add to Compare</a></div>
+							</div>
+
+						</div>
+
+						<div class="review">
+							<img src="img/stars-4.png" alt="1 review">
+							<a onclick="$('a[href=\'#tab-review\']').trigger('click');">1 review</a> <a onclick="$('a[href=\'#tab-review\']').trigger('click');" class="btn btn-mini"><i class="icon-comment"></i> Write a review</a>
+						</div>
+						
+						<div class="share"><!-- AddThis button BEGIN -->
+							<div class="addthis_default_style"><a class="addthis_button_compact at300m" href="#"><span class="at300bs at15nc at15t_compact"></span>Share</a> <a class="addthis_button_email at300b" title="Email" href="#"><span class="at300bs at15nc at15t_email"></span></a><a class="addthis_button_print at300b" title="Print" href="#"><span class="at300bs at15nc at15t_print"></span></a> <a class="addthis_button_facebook at300b" title="Send to Facebook" href="#"><span class="at300bs at15nc at15t_facebook"></span></a> <a class="addthis_button_twitter at300b" title="Tweet This" href="#"><span class="at300bs at15nc at15t_twitter"></span></a></div>
+							<script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js"></script> 
+							<!-- AddThis button END --> 
+						</div>
+
+						<div class="tags"><i class="icon-tags" title="Tags:"></i> 
+							<a href="http://localhost/opencart152_1/index.php?route=product/search&amp;filter_tag=samsumg">samsung</a>
+							<a href="http://localhost/opencart152_1/index.php?route=product/search&amp;filter_tag=axy">galaxy</a>
+						</div>
+						
+					</div>
+
+				</div>
+				
+				<section id="full_info">
+
+					<div class="tabbable">
+
+						<ul id="tabs" class="nav nav-tabs">
+							<li class="active"><a href="#tab-description" data-toggle="tab">Description</a></li>
+							<li class=""><a href="#tab-review" data-toggle="tab">Reviews (0)</a></li>
+						</ul>
+
+						<div class="tab-content">
+
+							<div id="tab-description" class="tab-pane active">
+								
+								<p>Samsung Galaxy Tab 10.1, is the world’s thinnest tablet, measuring 8.6 mm thickness, running with Android 3.0 Honeycomb OS on a 1GHz dual-core Tegra 2 processor, similar to its younger brother Samsung Galaxy Tab 8.9.</p>
+								
+								<p>Samsung Galaxy Tab 10.1 gives pure Android 3.0 experience, adding its new TouchWiz UX or TouchWiz 4.0 – includes a live panel, which lets you to customize with different content, such as your pictures, bookmarks, and social feeds, sporting a 10.1 inches WXGA capacitive touch screen with 1280 x 800 pixels of resolution, equipped with 3 megapixel rear camera with LED flash and a 2 megapixel front camera, HSPA+ connectivity up to 21Mbps, 720p HD video recording capability, 1080p HD playback, DLNA support, Bluetooth 2.1, USB 2.0, gyroscope, Wi-Fi 802.11 a/b/g/n, micro-SD slot, 3.5mm headphone jack, and SIM slot, including the Samsung Stick – a Bluetooth microphone that can be carried in a pocket like a pen and sound dock with powered subwoofer.</p>
+								
+								<p>Samsung Galaxy Tab 10.1 will come in 16GB / 32GB / 64GB verities and pre-loaded with Social Hub, Reader’s Hub, Music Hub and Samsung Mini Apps Tray – which gives you access to more commonly used apps to help ease multitasking and it is capable of Adobe Flash Player 10.2, powered by 6860mAh battery that gives you 10hours of video-playback time.</p>
+						
+							</div> <!-- .tab-pane -->
+						
+							<div id="tab-review" class="tab-pane">
+
+								<div class="row-fluid">
+								
+									<div id="review" class="">
+
+										<div class="content">
+											<b>Kate</b><br>
+											<small>20/01/2012</small><br>
+											<img src="img/stars-4.png" alt="1 reviews">
+											<p>Nulla semper elit ut ipsum auctor vel sollicitudin nunc gravida. In tortor enim, lacinia vel iaculis non, vestibulum vel nisl. Ut porta aliquet cursus.</p>
+										</div>
+
+										<div class="content empty white">
+
+											<div class="alert fade-in">There are no reviews for this product.</div>
+										</div>
+									
+									</div>
+							
+							<div id="add_review" class="">
+
+								<h4 class="contentset center" id="review-title"><div class="inner"><span>Write a review</span></div></h4>
+
+								<div class="reviewform">
+
+									<div class="control-group">
+										<label class="label-group"><b>Your Name:</b></label>
+										<div class="controls">
+											<input type="text" name="name" value="" class="span6">
+										</div>
+									</div>
+
+									<div class="control-group">
+										<label class="label-group"><b>Your Review:</b></label>
+										<div class="controls"><textarea name="text" cols="60" rows="8" class="span6"></textarea>
+										</div>
+									</div>
+									
+									<div class="buttons">
+										<a id="button-review" class="btn btn-inverse"><span>Add review</span></a>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+						</div>
+
+						
+						</div>
+
+					</div>
+
+				</section>
+
+			</div>
+
+		</section>
+
+	</div> <!-- .row -->
+
+	<section id="related-products" class="es-carousel-wrapper products-carousel">
+			
+		<div class="contentset center"><h4 class="inner"><span>Related Products</span></h4></div>
+
+		<div class="es-carousel">
+
+			<ul>
+			
+		<li>
+			<div class="inner">
+				<div class="image"><a href="product.html"><img src="img/products/jeansMA6-80x80.jpg" alt="Wash Slim Fit Jeans"></a></div>
+				<div class="name"><a href="http://localhost/opencart152_1/index.php?route=product/product&amp;product_id=58">Wash Slim Fit Jeans</a></div>
+				<div class="price">$32.00</div>
+				<div class="cart">
+					<a onclick="addToCart('58');" class="btn btn-cart btn-small"><span>Add to Cart</span></a>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="inner">
+				<div class="image"><a href="product.html"><img src="http://localhost/opencart152_1/image/cache/data/sweats/SweatA1-80x80.jpg" alt="Super Hoody "></a></div>
+				<div class="name"><a href="http://localhost/opencart152_1/index.php?route=product/product&amp;product_id=74">Super Hoody </a></div>
+				<div class="price">$32.00</div>
+				<div class="rating"><img src="img/stars-4.png" alt="1 reviews"></div>
+				<div class="cart">
+					<a onclick="addToCart('74');" class="btn btn-cart btn-small"><span>Add to Cart</span></a>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="inner">
+				<div class="image"><a href="product.html"><img src="img/products/jeansMA6-80x80.jpg" alt="Wash Slim Fit Jeans"></a></div>
+				<div class="name"><a href="http://localhost/opencart152_1/index.php?route=product/product&amp;product_id=58">Wash Slim Fit Jeans</a></div>
+				<div class="price">$32.00</div>
+				<div class="cart">
+					<a onclick="addToCart('58');" class="btn btn-cart btn-small"><span>Add to Cart</span></a>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="inner">
+				<div class="image"><a href="product.html"><img src="http://localhost/opencart152_1/image/cache/data/sweats/SweatA1-80x80.jpg" alt="Super Hoody "></a></div>
+				<div class="name"><a href="http://localhost/opencart152_1/index.php?route=product/product&amp;product_id=74">Super Hoody </a></div>
+				<div class="price">$32.00</div>
+				<div class="rating"><img src="img/stars-4.png" alt="1 reviews"></div>
+				<div class="cart">
+					<a onclick="addToCart('74');" class="btn btn-cart btn-small"><span>Add to Cart</span></a>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="inner">
+				<div class="image"><a href="product.html"><img src="img/products/jeansMA6-80x80.jpg" alt="Wash Slim Fit Jeans"></a></div>
+				<div class="name"><a href="http://localhost/opencart152_1/index.php?route=product/product&amp;product_id=58">Wash Slim Fit Jeans</a></div>
+				<div class="price">$32.00</div>
+				<div class="cart">
+					<a onclick="addToCart('58');" class="btn btn-cart btn-small"><span>Add to Cart</span></a>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="inner">
+				<div class="image"><a href="product.html"><img src="http://localhost/opencart152_1/image/cache/data/sweats/SweatA1-80x80.jpg" alt="Super Hoody "></a></div>
+				<div class="name"><a href="http://localhost/opencart152_1/index.php?route=product/product&amp;product_id=74">Super Hoody </a></div>
+				<div class="price">$32.00</div>
+				<div class="rating"><img src="img/stars-4.png" alt="1 reviews"></div>
+				<div class="cart">
+					<a onclick="addToCart('74');" class="btn btn-cart btn-small"><span>Add to Cart</span></a>
+				</div>
+			</div>
+		</li>
+
+	</section>
+
+</div>
+	
+</section> <!-- #content -->
+
+<footer id="footer" class="container">
+
+	<div class="row-fluid">
+					
+			<div class="column span2">
+				<h3 class="header">Information</h3>
+				<ul class="content">
+				  <li><a href="#">About Us</a></li>
+					<li><a href="#">Delivery Information</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">Terms &amp; Conditions</a></li>
+				</ul>
+			</div>
+
+			<div class="column span2">
+				<h3 class="header">Customer Service</h3>
+				<ul class="content">
+					<li><a href="#">Contact Us</a></li>
+					<li><a href="#">Returns</a></li>
+					<li><a href="#">Site Map</a></li>
+				</ul>
+			</div>
+
+			<div class="column span2">
+				<h3 class="header">Extras</h3>
+				<ul class="content">
+					<li><a href="#">Brands</a></li>
+					<li><a href="#">Gift Vouchers</a></li>
+					<li><a href="#">Affiliates</a></li>
+					<li><a href="#">Specials</a></li>
+				</ul>
+			</div>
+
+			<div class="column span2">
+				<h3 class="header">My Account</h3>
+				<ul class="content">
+					<li><a href="#">My Account</a></li>
+					<li><a href="#">Order History</a></li>
+					<li><a href="#">Wish List</a></li>
+					<li><a href="#">Newsletter</a></li>
+				</ul>
+			</div>
+
+		<div class="span4 contact">
+						
+			<div class="social">
+				<p>
+					<span>Follow Us:</span>
+					<a href="http://facebook.com/pages/Everthemes/184498528306229" target="_blank">
+						<img src="img/facebook.png" alt="Facebook" title="Facebook">
+					</a>
+					<a href="https://twitter.com/#!/everthemes" target="_blank">
+						<img src="img/twitter.png" alt="Twitter" title="Twitter">
+					</a>
+					<a href="https://plus.google.com/u/0/105791630767456024442" target="_blank">
+						<img src="img/gplus.png" alt="Google+" title="Google+">
+					</a>
+				</p>
+			</div>
+			
+			<div class="info">
+				<p>Sellegance is a responsive, clean, beautifully designed OpenCart theme.</p>
+			</div>
+			
+		
+		</div>
+
+	</div>
+
+</footer><!-- #footer -->
+
+<footer id="footer-end" class="container">
+
+	<div class="row">
+
+		<ul class="span12">
+			Sellegance &copy; 2012
+		</ul>
+
+	</div><!-- end .container -->
+
+</footer><!-- #footer-end -->
+
+	<!--[if !lte IE 6]><!-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<!--[if lt IE 9]> <script type="text/javascript" src="js/selectivizr.min.js"></script> <![endif]-->
+		<script type="text/javascript" src="js/respond.min.js"></script>
+		<script type="text/javascript" src="js/colorbox/jquery.colorbox-min.js"></script>
+		<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing-1.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery.flexslider.min.js"></script>
+		<script type="text/javascript" src="js/jquery.elastislide.js"></script>
+		<script type="text/javascript" src="js/jquery.ui.totop.js"></script>
+		<script type="text/JavaScript" src="js/cloud-zoom.1.0.2.min.js"></script>
+		<script type="text/javascript" src="js/custom.js"></script>
+	<!--<![endif]-->
+
+</body>
+</html>
