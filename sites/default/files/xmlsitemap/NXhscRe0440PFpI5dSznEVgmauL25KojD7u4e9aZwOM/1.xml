@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/newbreed/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>http://localhost/newbreed/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+<url><loc>http://localhost/newbreed/cart</loc></url>
+<url><loc>http://localhost/newbreed/elements</loc></url>
+<url><loc>http://localhost/newbreed/about-us</loc></url>
+<url><loc>http://localhost/newbreed/columns</loc></url>
+<url><loc>http://localhost/newbreed/category</loc></url>
+<url><loc>http://localhost/newbreed/product</loc></url>
+<url><loc>http://localhost/newbreed/music</loc></url>
+<url><loc>http://localhost/newbreed/user/register</loc></url>
+</urlset>
