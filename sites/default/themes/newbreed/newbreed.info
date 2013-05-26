@@ -11,6 +11,7 @@ stylesheets[all][] = css/elastislide.min.css
 stylesheets[all][] = css/fancybox.min.css
 stylesheets[all][] = css/flexslider.css
 stylesheets[all][] = css/style.css
+stylesheets[all][] = css/pages.css
 
 ;scripts[] = http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
 scripts[] = js/jquery-1.7.1.min.js

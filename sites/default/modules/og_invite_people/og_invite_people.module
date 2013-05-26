@@ -1,0 +1,232 @@
+<?php
+/**
+ * @file
+ * OG Invite People
+ *
+ * OG 7.x-2.x required
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function og_invite_people_menu() {
+  $items = array();
+  $items['group/%/%/admin/people/invite'] = array(
+    'page callback' => 'drupal_get_form',
+    'title' => 'Invite People',
+    'page arguments' => array('_og_invite_people_new_users_form', 1, 2),
+    'type' => MENU_LOCAL_TASK,
+    'weight' => 4,
+    'access callback' => 'og_invite_people_user_access_group',
+    'access arguments' => array('invite people', 1, 2),
+  );
+  return $items;
+}
+
+/**
+ * Implements hook_og_ui_get_group_admin()
+ */
+function og_invite_people_og_ui_get_group_admin($group_type, $gid) {
+  $items = array();
+  if (og_user_access($group_type, $gid, 'invite people')) {
+    $items['og_invite_people'] = array(
+      'title' => t('Invite People'),
+      'description' => t('Invited users will be created and notified by email.'),
+      'href' => 'admin/people/invite',
+    );
+  }
+  return $items;
+}
+
+/**
+ * Check if entity is a group, and user has permission - Access.
+ */
+function og_invite_people_user_access_group($perm, $group_type, $gid) {
+  $group = entity_load_single($group_type, $gid);
+  if (!$group || !og_is_group($group_type, $group)) {
+    return FALSE;
+  }
+
+  // Extract the group's bundle.
+  list(, , $bundle) = entity_extract_ids($group_type, $group);
+  // Verify the bundle has roles
+  if (!og_roles($group_type, $bundle, $gid)) {
+    return FALSE;
+  }
+
+  $entity_info = entity_get_info($group_type);
+  if (!$group_type || !$entity_info) {
+    // Not a valid entity type.
+    return FALSE;
+  }
+  return og_is_group($group_type, $gid) && og_user_access($group_type, $gid, $perm);
+}
+
+
+/**
+ * Implement hook_og_permission().
+ */
+function og_invite_people_og_permission() {
+  $items = array();
+  $items['invite people'] = array(
+    'title' => t('Invite people'),
+    'description' => t('Users may invite other users to the group without approval.'),
+    'default role' => array(OG_ADMINISTRATOR_ROLE),
+  );
+  return $items;
+}
+
+/**
+ * Form for email text field
+ */
+function _og_invite_people_new_users_form($form, &$form_state, $group_type, $gid) {
+  og_set_breadcrumb($group_type, $gid, array(l(t('Group'), "$group_type/$gid/group")));
+  $group = entity_load_single($group_type, $gid);
+  $label = entity_label($group_type, $group);
+
+  $form['group_type'] = array('#type' => 'value', '#value' => $group_type);
+  $form['gid'] = array('#type' => 'value', '#value' => $gid);
+
+  $form['og_invite_people'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Invite a new user to %group', array('%group' => $label)),
+  );
+  $form['og_invite_people']['invitee'] = array(
+    '#type' => 'textfield',
+    '#title' => t('User email(s)'),
+    '#description' => t('New user will be created and invited as a member to this group. One time login link is sent to invitee\'s email. (You can also invite multiple people at once. Simply enter their email addresses separated by commas.)'),
+    '#required' => TRUE,
+  );
+  $form['og_invite_people']['state'] = array(
+    '#type' => 'select',
+    '#title' => t('Membership state'),
+    '#options' => og_group_content_states(),
+    '#description' => t('Select the state of the membership.'),
+  );
+
+  $field_names = og_get_group_audience_fields('user', 'user', $group_type);
+  $field_name = !empty($form_state['values']['field_name']) ? $form_state['values']['field_name'] : key($field_names);
+
+  if (count($field_names) > 1) {
+    $form['og_invite_people']['field_name'] = array(
+      '#type' => 'select',
+      '#title' => t('Field name'),
+      '#options' => $field_names,
+      '#default_value' => $field_name,
+      '#description' => t('Select the field name, the group membership should be registered in.'),
+    );
+  }
+  else {
+    // There is only a single field name, so just pass it as a value.
+    $form['og_invite_people']['field_name'] = array(
+      '#type' => 'value',
+      '#value' => $field_name,
+    );
+  }
+
+  $form_state['field_name'] = $field_name;
+
+  $form['actions'] = array('#type' => 'actions');
+  $form['actions']['submit'] = array('#type' => 'submit', '#value' => t('Invite user'));
+
+  return $form;
+}
+
+
+/**
+ * _og_invite_people_new_users_form - Validation handler
+ */
+function _og_invite_people_new_users_form_validate($form, &$form_state) {
+  //$account = user_load_by_name($form_state['values']['name']);
+  $group_type = $form_state['values']['group_type'];
+  $gid = $form_state['values']['gid'];
+  $invitee_emails = explode(',', preg_replace('/\s+/', '', $form_state['values']['invitee']));
+
+  foreach ($invitee_emails as $invitee_email) {
+    if (!valid_email_address($invitee_email)) {
+      form_set_error('invitee', t('Invalid email(s).'));
+    }
+    elseif (user_load_by_mail($invitee_email)) {
+      form_set_error('invitee', t('User email already exists in the system.'));
+    }
+  }
+}
+
+/**
+ * _og_invite_people_new_users_form - Submit handler
+ */
+function _og_invite_people_new_users_form_submit($form, &$form_state) {
+  $group_type = $form_state['values']['group_type'];
+  $gid = $form_state['values']['gid'];
+  $invitee_emails = explode(',', preg_replace('/\s+/', '', $form_state['values']['invitee']));
+  $state = $form_state['values']['state'];
+  $field_name = $form_state['field_name'];
+
+  // Add group membership form.
+  $values = array();
+
+  foreach ($invitee_emails as $invitee_email) {
+    // Add group membership form. We still don't have the user or state.
+    $og_membership = og_membership_create($group_type, $gid, 'user', 0, $field_name, $values);
+
+    // Create a user and return $account object.
+    $account = _og_invite_people_create_user($invitee_email);
+
+    // Add user to group.
+    $og_membership->etid = $account->uid;
+    $og_membership->state = $state;
+    $og_membership->save();
+
+    // Offer invitee user account object in form_state.
+    $form_state['account'][] = $account;
+
+    // Invoke hook_og_invite_people_invited() - after a user is created and added to group.
+    module_invoke_all('og_invite_people_invited', $account, $og_membership);
+
+    drupal_set_message(t('%user has been created and invited to this group.', array('%user' => format_username($account))));
+  }
+}
+
+/**
+ * Create new user and send email.
+ * @return object $account
+ */
+function _og_invite_people_create_user($invitee_email) {
+  // This will generate a random password.
+  $password = user_password(8);
+
+  // Username from email.
+  $name = explode('@', $invitee_email);
+  $name = $name[0];
+
+  // Check if user name is available and append _NUM if existing.
+  if (user_load_by_name($name)) {
+    $i = 1;
+    $new_name = $name . '_' . $i;
+    while (user_load_by_name($new_name)) {
+      $i++;
+      $new_name = $name . '_' . $i;
+    }
+    $name = $new_name;
+  }
+
+  // Set up the user fields.
+  $fields = array(
+    'name' => $name,
+    'mail' => $invitee_email,
+    'pass' => $password,
+    'status' => 1,
+    'init' => 'email address',
+    'roles' => array(
+      DRUPAL_AUTHENTICATED_RID => 'authenticated user',
+    ),
+  );
+
+  // Create new user function.
+  $account = user_save('', $fields);
+
+  // Send the e-mail through the user module.
+  drupal_mail('user', 'register_admin_created', $invitee_email, NULL, array('account' => $account), variable_get('site_mail', NULL));
+
+  return $account;
+}

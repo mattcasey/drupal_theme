@@ -89,7 +89,7 @@
 
 			<div class="span4 rightbox">
 				<div id="search">
-					<?php print $search_box; ?>
+					<?php print render($search_box); ?>
 					<?php //print $shopping_cart; ?>
 					<!--<div class="searchbox input-append">
 						<input type="text" name="search-box" value="" placeholder="Search" />
@@ -129,7 +129,7 @@
 
 		<div id="main-wrapper"><div id="main" class="clearfix">
 
-			<div id="content" class="column"><div class="section">
+			<div id="content" class="<?php print _bootstrap_content_span($columns); ?>"><div class="section">
 				<?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
 				<a id="main-content"></a>
 				<?php print render($title_prefix); ?>
@@ -166,7 +166,7 @@
 			<div class="column span2">
 				<h3 class="header">Information</h3>
 				<ul class="content">
-					<li><a href="#">About Us</a></li>
+					<li><?php print l(t('About Us'), 'about-us'); ?></li>
 					<li><a href="#">Delivery Information</a></li>
 					<li><a href="#">Privacy Policy</a></li>
 					<li><a href="#">Terms &amp; Conditions</a></li>
@@ -176,9 +176,9 @@
 			<div class="column span2">
 				<h3 class="header">Customer Service</h3>
 				<ul class="content">
-					<li><?php print l('Contact Us', 'contact'); ?></li>
+					<li><?php print l(t('Contact Us'), 'contact'); ?></li>
 					<li><a href="#">Returns</a></li>
-					<li><a href="#">Site Map</a></li>
+					<li><?php print l(t('Site Map'), 'sitemap.xml'); ?></li>
 				</ul>
 			</div>
 

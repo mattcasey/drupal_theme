@@ -1,6 +1,21 @@
 // When DOM is fully loaded
 jQuery(document).ready(function($) {
 
+	/* ---------------------------------------------------------------------- */
+	/*	Welcome
+	/* ---------------------------------------------------------------------- */
+		
+		(function(){
+			var show = function(){
+				this.animate({'left' : '0px'}, {queue: false});
+				this.fadeIn();
+			};
+			var delay = 100;
+			$('.js-animated-list li').hide().each(function(){
+				setTimeout($.proxy(show, $(this)), 100+delay);
+				delay += 300;
+			});
+		})();
 
 	/* ---------------------------------------------------------------------- */
 	/*	Colorbox

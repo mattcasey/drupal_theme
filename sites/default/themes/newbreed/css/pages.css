@@ -1,0 +1,30 @@
+
+/** FRONT PAGE - Welcome **/
+
+.front .js-animated-list {
+	overflow: hidden;
+	padding-left: 25px;
+	margin-left: 0;
+}
+.front .js-animated-list li {
+	position: relative;
+	left: -200px;
+}
+
+.front .title {
+	text-align: center;
+}
+.front .icon-home {
+	display: none;
+}
+.front .form-submit {
+	margin-left: 180px;
+}
+.front #user-login-form ul {
+	margin-left: 185px;
+	margin-bottom: 1em;
+	list-style: none;
+	opacity: .5;
+	font-size: 11px;
+
+}

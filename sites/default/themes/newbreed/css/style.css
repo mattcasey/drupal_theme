@@ -489,17 +489,17 @@ body {
 	/*	Main content
 	-------------------------------------------------- */
 
-		#maincontent { 
+		#content { 
 			padding: 20px 0;
 		}
 
-		#maincontent.home { padding:0;}
+		#content.home { padding:0;}
 			
-			#maincontent .info-inner { padding:40px 40px 20px; }
+			#content .info-inner { padding:40px 40px 20px; }
 			
-			#maincontent.maintenance { padding:40px 0 0; }
+			#content.maintenance { padding:40px 0 0; }
 
-			#maincontent.span12 {
+			#content.span12 {
 				margin-left: 0;
 			}
 
@@ -1424,6 +1424,7 @@ body {
 
 		.sidebar {
 			margin-top:20px;
+			margin-bottom: 20px;
 		}
 
 		.sidebar.close {
