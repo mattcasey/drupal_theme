@@ -205,7 +205,7 @@
 					<li><a href="#">Wish List</a></li>
 					<li><a href="#">Newsletter</a></li>
 					<?php else: ?>
-					<?php print l('Register', 'user/register'); ?>
+					<?php print l('Log in', '<front>'); ?>
 					<?php endif; ?>
 				</ul>
 			</div>

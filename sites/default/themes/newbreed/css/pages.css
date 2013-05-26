@@ -20,7 +20,6 @@
 }
 .front #user-login-form ul {
 	margin-left: 185px;
-	margin-bottom: 1em;
 	list-style: none;
 	opacity: .5;
 	font-size: 11px;
@@ -30,4 +29,7 @@
 /** USER - Registration **/
 .page-user-register .tabs {
 	display: none;
+}
+.column-left {
+	float: left;
 }

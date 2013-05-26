@@ -1,0 +1,11 @@
+<?php
+
+/*********************
+		MENUS
+********************/
+
+function newbreed_menu_alter(&$item) {
+	dsm("WHAT");
+  // Hide the "Create new account" tab
+  $item['user/register']['type'] = MENU_CALLBACK;
+}

@@ -497,7 +497,7 @@ body {
 	-------------------------------------------------- */
 
 		#content { 
-			padding: 20px 0;
+			padding: 20px 0 40px;
 		}
 
 		#content.home { padding:0;}

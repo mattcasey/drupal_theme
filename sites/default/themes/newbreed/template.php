@@ -7,10 +7,26 @@ function newbreed_preprocess_page(&$variables){
   $variables['search_box'] = drupal_get_form('search_form');
   // $shopping_cart = drupal_render(drupal_get_form('views_form_commerce_cart_block_default'));
   // $variables['shopping_cart'] = $shopping_cart;
-  if(arg(0) == 'user' && arg(1) == 'register') {
-  	drupal_set_title(t('Sign Up - Custom Registration'));
+  if(arg(0) == 'user') {
+  	switch (arg(1)) {
+  		case 'register':
+  			drupal_set_title(t('Sign Up - Custom Registration'));
+  			break;
+
+  		case 'password':	
+  			drupal_set_title(t('Reset your password'));
+  			break;
+
+  		case 'login':
+  			drupal_set_title(t('Log in to your account'));
+  	}
   }
 }
+
+
+/*********************
+		MENUS
+********************/
 
 function newbreed_menu_tree__main_menu($variables) {
   return '<ul class="menu dropdown-menu">' . $variables['tree'] . '</ul>';
@@ -18,6 +34,7 @@ function newbreed_menu_tree__main_menu($variables) {
 function newbreed_menu_tree__secondary($variables) {
   return '<ul id="account-links">' . $variables['tree'] . '</ul>';
 }
+
 
 // Add username to User Menu eg. "Welcome Brian"
 function newbreed_menu_link(array $variables) {
@@ -29,28 +46,28 @@ function newbreed_menu_link(array $variables) {
 	$is_home = $element['#title'] == t('Home');
 
 	if($is_account_menu_link) {
-	if($user->uid != 0) {
-		$element['#title'] = $user->name;
-		$output = '<div id="welcome">';
-		$output .= t('Welcome') . ' ' . l($element['#title'], $element['#href'], $element['#localized_options']);
-		$output .= '</div>';
+		if($user->uid != 0) {
+			$element['#title'] = $user->name;
+			$output = '<div id="welcome">';
+			$output .= t('Welcome') . ' ' . l($element['#title'], $element['#href'], $element['#localized_options']);
+			$output .= '</div>';
+		}
+		else {
+			$output = l('Login', 'user/login');
+		}
 	}
 	else {
-		$output = l('Login', 'user/login');
-	}
-	}
-	else {
-	if($is_parent) {
-		$element['#attributes']['class'][] = 'dropdown';
-	}
-	else if($is_home) {
-		$element['#title'] = '<i class="icon-home"></i>';
-		$element['#localized_options']['html'] = TRUE;
-	}
-	$output = l($element['#title'], $element['#href'], $element['#localized_options']);
+		if($is_parent) {
+			$element['#attributes']['class'][] = 'dropdown';
+		}
+		else if($is_home) {
+			$element['#title'] = '<i class="icon-home"></i>';
+			$element['#localized_options']['html'] = TRUE;
+		}
+		$output = l($element['#title'], $element['#href'], $element['#localized_options']);
 	}
 	if($element['#below']) {
-	$sub_menu = drupal_render($element['#below']);
+		$sub_menu = drupal_render($element['#below']);
 	}
 	return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
@@ -78,12 +95,26 @@ function newbreed_form_search_form_alter(&$form, &$form_state) {
 }
 
 function newbreed_form_user_register_form_alter(&$form, &$form_state) {
+
   unset($form['account']['mail']['#description']);
+  
+ //  $account = array(
+	// '#type' => 'container',
+	// '#attributes' => array(
+	// 	'class' => array('column-left'),
+	// ),
+ //  );
+ //  foreach(array('field_first_name', 'field_last_name', 'field_mobile_phone', 'account', 'field_street_address', 'field_zip_code' ) as $account_field) {
+ //  	$account[$account_field] = $form[$account_field];
+ //  	$form[$account_field]['#access'] = FALSE;
+ //  }
+ //  $form['account_fields'] = $account;
 }
 
 function newbreed_form_user_login_block_alter(&$form, &$form_state) {
   $form['name']['#attributes'] = array('class' => array('span3'));
   $form['pass']['#attributes'] = array('class' => array('span3'));
+  $form['links']['#markup'] = '<ul><li class="last"><a href="/newbreed/user/password" title="Forgot your password?">Forgot your password?</a></li></ul>';
 }
 
 /**

@@ -1,0 +1,4 @@
+name = New Breed Wireless Helper
+description = Includes hooks and helper functions
+core = 7.x
+files[] = newbreed.module
