@@ -357,7 +357,11 @@ body {
 		font-family:sans-serif; 
 	}
 
-		#links a { 
+		#account-links {
+			list-style: none;
+			margin-top: 20px;
+		}
+		#account-links a { 
 			white-space:nowrap; 
 			border: 0; background: none; 
 			text-shadow: none;  
@@ -366,10 +370,13 @@ body {
 			box-shadow: none;
 		}
 
-		#links a + a { 
+		#account-links a + a { 
 			margin-left: 6px; 
 			padding-left: 6px; 
 			border-left: 1px solid #DDD; 
+		}
+		.not-logged-in #account-links {
+			display: none;
 		}
 
 	/* -------------------------------------------------- */

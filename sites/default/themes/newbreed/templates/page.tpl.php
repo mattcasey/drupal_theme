@@ -89,7 +89,11 @@
 
 			<div class="span4 rightbox">
 				<div id="search">
-					<?php print render($search_box); ?>
+					<?php
+						if(user_is_logged_in()) {
+							print render($search_box);
+						}
+					?>
 					<?php //print $shopping_cart; ?>
 					<!--<div class="searchbox input-append">
 						<input type="text" name="search-box" value="" placeholder="Search" />
@@ -106,7 +110,7 @@
 	<div id="thickbar"></div>
 
 	<div class="wrapper-inner">
-		<?php if ($main_menu || $secondary_menu): ?>
+		<?php if (user_is_logged_in() && ($main_menu || $secondary_menu)): ?>
 			<div id="mainnav" class="navbar">
 				<div class="navbar-inner">
 					<div class="container">
@@ -195,13 +199,16 @@
 			<div class="column span2">
 				<h3 class="header">My Account</h3>
 				<ul class="content">
+					<?php if(user_is_logged_in()): ?>
 					<li><a href="#">My Account</a></li>
 					<li><a href="#">Order History</a></li>
 					<li><a href="#">Wish List</a></li>
 					<li><a href="#">Newsletter</a></li>
+					<?php else: ?>
+					<?php print l('Register', 'user/register'); ?>
+					<?php endif; ?>
 				</ul>
 			</div>
-
 
 			<div class="span4 contact">
 				<div class="social">

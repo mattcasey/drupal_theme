@@ -7,13 +7,16 @@ function newbreed_preprocess_page(&$variables){
   $variables['search_box'] = drupal_get_form('search_form');
   // $shopping_cart = drupal_render(drupal_get_form('views_form_commerce_cart_block_default'));
   // $variables['shopping_cart'] = $shopping_cart;
+  if(arg(0) == 'user' && arg(1) == 'register') {
+  	drupal_set_title(t('Sign Up - Custom Registration'));
+  }
 }
 
 function newbreed_menu_tree__main_menu($variables) {
   return '<ul class="menu dropdown-menu">' . $variables['tree'] . '</ul>';
 }
 function newbreed_menu_tree__secondary($variables) {
-  return '<ul id="links">' . $variables['tree'] . '</ul>';
+  return '<ul id="account-links">' . $variables['tree'] . '</ul>';
 }
 
 // Add username to User Menu eg. "Welcome Brian"

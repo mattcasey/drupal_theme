@@ -28,3 +28,8 @@
 	font-size: 11px;
 
 }
+
+/** USER - Registration **/
+.page-user-register .tabs {
+	display: none;
+}
