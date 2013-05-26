@@ -111,6 +111,10 @@ body {
 /*	Forms
 /* ---------------------------------------------------------------------- */
 	
+	form {
+		margin: 0;
+	}
+
 	.control-group .error {
 		color: #B94A48;
 		font-size:11px;
@@ -323,8 +327,9 @@ body {
 
 	#search { margin-top: 64px; text-align: left; }
 
-			#search .searchbox {
+			#search .input-append {
 				position: relative;
+				display: block;
 			}
 			#search input { 
 				margin: 0; 
@@ -333,7 +338,7 @@ body {
 				outline:none;
 				background: #FFF;
 			}
-			#search .button-search {		
+			#search .btn {		
 				position: absolute;
 				top: 0;
 				right: 0;

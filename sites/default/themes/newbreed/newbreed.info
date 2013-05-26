@@ -6,7 +6,7 @@ version = 1.0
 core = 7.x
 base theme = bootstrap
 
-stylesheets[all][] = css/bootstrap.min.css
+stylesheets[all][] = css/bootstrap.combined.css
 stylesheets[all][] = css/elastislide.min.css
 stylesheets[all][] = css/fancybox.min.css
 stylesheets[all][] = css/flexslider.css

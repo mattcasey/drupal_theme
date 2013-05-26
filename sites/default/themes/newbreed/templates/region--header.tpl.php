@@ -28,21 +28,7 @@
  * @ingroup themeable
  */
 ?>
-<div class="span4 leftbox">
-
-	<div id="welcome">
-		Welcome Brian Byrd
-	</div>
-
-	<div id="links" class="hidden-phone">
-		<a href="login.html" title="My Account">Control Box</a>
-		<a href="checkout.html" title="Checkout">Checkout</a>
-		<a href="login.html" title="Wishlist">Wishlist</a>
-	</div>
-
-</div> <!-- .leftbox -->
-
-<div class="span4 rightbox">
+      
 	<!--
 	<div id="minicart">
 
@@ -95,10 +81,11 @@
 
 	</div> -->
 	<div id="search">
-		<div class="searchbox input-append">
+		<?php print $search_box; ?>
+		<!--<div class="searchbox input-append">
 			<input type="text" name="search-box" value="" placeholder="Search" />
 			<button class="btn button-search" type="button"><i class="icon-search"></i></button>
-		</div>
+		</div>-->
 	</div>
 <!--
 	<div id="wrapselector">
@@ -129,10 +116,3 @@
 	</div> -->
 
 </div> <!-- .rightbox -->
-
-
-<?php if ($content): ?>
-  <div class="<?php print $classes; ?>">
-    <?php print $content; ?>
-  </div>
-<?php endif; ?>

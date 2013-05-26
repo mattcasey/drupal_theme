@@ -77,64 +77,131 @@
 
 	<header id="header" class="container">
 		<div class="row-fluid">
-		
-	  <?php if ($logo): ?>
-        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-          <img src="<?php print "$base_path$directory/img/nbw/nbw_logo.png"; ?>" alt="<?php print t('Home'); ?>" />
-        </a>
-      <?php endif; ?>
-      
-			<?php print render($page['header']); ?>
+			<div class="span4 leftbox">
+				<?php print render($secondary_nav); ?>
+			</div> <!-- .leftbox -->
 			
+			<div id="logo" class="span4">
+				<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
+					<img src="<?php print "$base_path$directory/img/nbw/nbw_logo.png"; ?>" alt="<?php print t('Home'); ?>" />
+				</a>
+			</div>
+
+			<div class="span4 rightbox">
+				<div id="search">
+					<?php print $search_box; ?>
+					<?php //print $shopping_cart; ?>
+					<!--<div class="searchbox input-append">
+						<input type="text" name="search-box" value="" placeholder="Search" />
+						<button class="btn button-search" type="button"><i class="icon-search"></i></button>
+					</div>-->
+				</div>
+			</div> <!-- .rightbox -->
+
 		</div> <!-- .row -->
 	</header><!-- #header -->
+	
+<section id="content-wrapper" class="container">
 
-    <?php if ($main_menu || $secondary_menu): ?>
-      <div id="navigation"><div class="section">
-        <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Main menu'))); ?>
-        <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Secondary menu'))); ?>
-      </div></div> <!-- /.section, /#navigation -->
-    <?php endif; ?>
+	<div id="thickbar"></div>
 
-    <?php if ($breadcrumb): ?>
-      <div id="breadcrumb"><?php print $breadcrumb; ?></div>
-    <?php endif; ?>
+	<div class="wrapper-inner">
+		<?php if ($main_menu || $secondary_menu): ?>
+			<div id="mainnav" class="navbar">
+				<div class="navbar-inner">
+					<div class="container">
+						<a class="btn btn-navbar btn-large" data-toggle="collapse" data-target=".nav-collapse">
+							<span>Menu</span><i class="icon-navbtn"></i>
+						</a>
+						<div class="nav-collapse">
+              				<?php print render($primary_nav); ?>
+              			</div>
+					</div>
+				</div>
+			</div> <!-- /.section, /#navigation -->
+		<?php endif; ?>
 
-    <?php print $messages; ?>
+		<?php if ($breadcrumb): ?>
+			<div id="breadcrumb"><?php print $breadcrumb; ?></div>
+		<?php endif; ?>
 
-    <div id="main-wrapper"><div id="main" class="clearfix">
+		<?php print $messages; ?>
 
-      <div id="content" class="column"><div class="section">
-        <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
-        <a id="main-content"></a>
-        <?php print render($title_prefix); ?>
-        <?php if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
-        <?php print render($title_suffix); ?>
-        <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
-        <?php print render($page['help']); ?>
-        <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
-        <?php print render($page['content']); ?>
-        <?php print $feed_icons; ?>
-      </div></div> <!-- /.section, /#content -->
+		<div id="main-wrapper"><div id="main" class="clearfix">
 
-      <?php if ($page['sidebar_first']): ?>
-        <div id="sidebar-first" class="column sidebar"><div class="section">
-          <?php print render($page['sidebar_first']); ?>
-        </div></div> <!-- /.section, /#sidebar-first -->
-      <?php endif; ?>
+			<div id="content" class="column"><div class="section">
+				<?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
+				<a id="main-content"></a>
+				<?php print render($title_prefix); ?>
+				<?php if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
+				<?php print render($title_suffix); ?>
+				<?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
+				<?php print render($page['help']); ?>
+				<?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
+				<?php print render($page['content']); ?>
+				<?php print $feed_icons; ?>
+			</div></div> <!-- /.section, /#content -->
 
-      <?php if ($page['sidebar_second']): ?>
-        <div id="sidebar-second" class="column sidebar"><div class="section">
-          <?php print render($page['sidebar_second']); ?>
-        </div></div> <!-- /.section, /#sidebar-second -->
-      <?php endif; ?>
+			<?php if ($page['sidebar_first']): ?>
+				<div id="sidebar-first" class="column sidebar"><div class="section">
+					<?php print render($page['sidebar_first']); ?>
+				</div></div> <!-- /.section, /#sidebar-first -->
+			<?php endif; ?>
 
-    </div></div> <!-- /#main, /#main-wrapper -->
+			<?php if ($page['sidebar_second']): ?>
+				<div id="sidebar-second" class="column sidebar"><div class="section">
+					<?php print render($page['sidebar_second']); ?>
+				</div></div> <!-- /.section, /#sidebar-second -->
+			<?php endif; ?>
+
+		</div></div> <!-- /#main, /#main-wrapper -->
+
+</section><!-- #content -->
 
 	<footer id="footer" class="container">
 		<div class="row-fluid">
 		
 			<?php print render($page['footer']); ?>
+
+			<div class="column span2">
+				<h3 class="header">Information</h3>
+				<ul class="content">
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Delivery Information</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">Terms &amp; Conditions</a></li>
+				</ul>
+			</div>
+
+			<div class="column span2">
+				<h3 class="header">Customer Service</h3>
+				<ul class="content">
+					<li><?php print l('Contact Us', 'contact'); ?></li>
+					<li><a href="#">Returns</a></li>
+					<li><a href="#">Site Map</a></li>
+				</ul>
+			</div>
+
+			<div class="column span2">
+				<h3 class="header">Extras</h3>
+				<ul class="content">
+					<li><a href="#">Brands</a></li>
+					<li><a href="#">Gift Vouchers</a></li>
+					<li><a href="#">Affiliates</a></li>
+					<li><a href="#">Specials</a></li>
+				</ul>
+			</div>
+
+			<div class="column span2">
+				<h3 class="header">My Account</h3>
+				<ul class="content">
+					<li><a href="#">My Account</a></li>
+					<li><a href="#">Order History</a></li>
+					<li><a href="#">Wish List</a></li>
+					<li><a href="#">Newsletter</a></li>
+				</ul>
+			</div>
+
 
 			<div class="span4 contact">
 				<div class="social">
@@ -164,4 +231,4 @@
 	</footer><!-- #footer-end -->
 
 
-  </div></div> <!-- /#page, /#page-wrapper -->
+	</div></div> <!-- /#page, /#page-wrapper -->
