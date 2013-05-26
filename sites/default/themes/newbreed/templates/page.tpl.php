@@ -110,7 +110,7 @@
 	<div id="thickbar"></div>
 
 	<div class="wrapper-inner">
-		<?php if (user_is_logged_in() && ($main_menu || $secondary_menu)): ?>
+		<?php if (($main_menu || $secondary_menu)): ?>
 			<div id="mainnav" class="navbar">
 				<div class="navbar-inner">
 					<div class="container">

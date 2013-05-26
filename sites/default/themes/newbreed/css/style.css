@@ -579,12 +579,11 @@ body {
 	}
 
 		.page-title {
+			margin-top: -15px; 
 			margin-bottom: 0;
 			padding: 20px 0;
 			text-align: center;
 		}
-
-		.page-title { margin-top: -15px; } 
 
 		.title { text-align: center; }
 
